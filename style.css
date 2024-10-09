@@ -6,36 +6,53 @@ body {
     background-color: #f5f5f5;
 }
 
+/* Header-Bereich */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 0;
+    background-color: #003366; /* Dunkelblau */
+    color: white; /* Weiße Schrift */
     text-align: center;
+    padding: 20px;
+    margin-bottom: 0; /* Verhindert Lücke nach dem Header */
+}
+
+/* Navigation-Bereich */
+nav {
+    background-color: white; /* Weißer Hintergrund */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optionaler Schatten für den Navigationsbereich */
 }
 
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Entfernt die Aufzählungszeichen */
+    margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block; /* Listenelemente nebeneinander */
+    margin-right: 20px; /* Abstand zwischen Links */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+    text-decoration: none; /* Entfernt Unterstreichung */
+    color: #333333; /* Dunkelgraue Schrift */
     font-weight: bold;
+    padding: 5px 10px;
 }
 
+nav ul li a:hover {
+    color: #000000; /* Dunkler beim Hover-Effekt */
+    border-bottom: 2px solid #003366; /* Optionale Linie beim Hover */
+}
+/* Section "Home" */
 section {
     padding: 20px;
     background-color: white;
     margin: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+/* Fußzeile */
 footer {
     background-color: #333;
     color: white;
