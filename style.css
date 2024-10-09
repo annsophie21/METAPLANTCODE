@@ -1,64 +1,119 @@
-/* Grundlegendes Layout und Design */
-body {
-    font-family: Arial, sans-serif;
+/* Grundlegendes Layout für die Webseite */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Header-Bereich */
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-top: 100px; /* Abstand für den Header */
+}
+
+/* Header */
 header {
-    background-color: #003366; /* Dunkelblau */
-    color: white; /* Weiße Schrift */
+    background-color: #003366; /* Dunkelblau wie auf der MetaPlantCode-Seite */
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     text-align: center;
-    padding: 20px;
-    margin-bottom: 0; /* Verhindert Lücke nach dem Header */
 }
 
-/* Navigation-Bereich */
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Navigation */
 nav {
-    background-color: white; /* Weißer Hintergrund */
+    background-color: #f4f4f4;
     padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optionaler Schatten für den Navigationsbereich */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-    list-style-type: none; /* Entfernt die Aufzählungszeichen */
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline-block; /* Listenelemente nebeneinander */
-    margin-right: 20px; /* Abstand zwischen Links */
+    margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none; /* Entfernt Unterstreichung */
-    color: #333333; /* Dunkelgraue Schrift */
+    color: #003366;
     font-weight: bold;
+    text-decoration: none;
     padding: 5px 10px;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #000000; /* Dunkler beim Hover-Effekt */
-    border-bottom: 2px solid #003366; /* Optionale Linie beim Hover */
+nav ul li a:hover,
+nav ul li a.active {
+    color: #32CD32; /* Grasgrün für aktiven oder hovernden Link */
 }
-/* Section "Home" */
+
+/* Hauptinhalt */
 section {
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
     background-color: white;
-    margin: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* Fußzeile */
+
+section h2 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Footer */
 footer {
-    background-color: #333;
+    background-color: #003366;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
 }
