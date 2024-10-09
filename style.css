@@ -456,3 +456,8 @@ a.news:hover{
         font-size: 1.2em; /* Verkleinerte Überschriften */
     }
 }
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
