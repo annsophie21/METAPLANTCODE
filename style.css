@@ -422,3 +422,37 @@ a.news{
 a.news:hover{
   text-decoration: underline;
 }
+
+/* -------------------Mobile Anpassungen----------------------*/
+@media (max-width: 768px) {
+
+    /* Header Anpassungen für Mobile */
+    header {
+        padding: 15px;
+    }
+
+    /* Navigation Anpassungen */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Verkleinerung des Inhaltsbereichs */
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    /* Textgröße anpassen für bessere Lesbarkeit auf kleinen Bildschirmen */
+    body {
+        font-size: 14px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2em; /* Verkleinerte Überschriften */
+    }
+}
