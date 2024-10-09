@@ -110,13 +110,13 @@
 
   .menu ul {
     list-style-type: none;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     height: 5rem;
     display: inline-flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: auto;
+    width: 100%;
   }
   
   .menu ul li {
@@ -124,6 +124,7 @@
     height: 5rem;
     align-items: center;
     margin: 0;
+    padding: 0 1rem;
   }
 
   .menu {
@@ -135,6 +136,9 @@
   .menu ul li div a{
     text-decoration: none;
     color: var(--dark);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;	  
   }
 
   .menu ul li div a.menu-active{
