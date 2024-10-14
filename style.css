@@ -468,6 +468,10 @@ img, video {
 }
 
 /* -------------------TEAM-Page----------------------*/
+.consortium-header {
+    padding: 10px;
+}
+
 .consortium-members {
     background-color: var(--28); /* Konsortien farblich differenzieren */
     padding: 2rem 20px; 
