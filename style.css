@@ -473,13 +473,17 @@ img, video {
 }
 
 .consortium-members {
+    diyplay: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--28); /* Konsortien farblich differenzieren */
     padding: 2rem 20px; 
     margin: 2rem auto; 
     max-width: 800px; /* Set a maximum width for the boxes */
     border-radius: 8px; /* Optional: To soften corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
-    width: calc(100% - 40px); /* Breite anpassen mit Abstand zum Seitenrand */
+    width: calc(100% - 5px); /* Breite anpassen mit Abstand zum Seitenrand */
     box-sizing: border-box; /* Berücksichtige Padding und Border in der Breite */
 }
 
@@ -499,30 +503,33 @@ img, video {
 
 .team-members {
     display: flex; /* Aktiviere Flexbox */
-    justify-content: space-between; /* Verteilt den Platz gleichmäßig */
+    justify-content: center; /* Verteilt den Platz gleichmäßig */
     align-items: center; /* Zentriert die Elemente vertikal */
     flex-wrap: wrap; /* Erlaubt Umbrüche bei kleineren Bildschirmen */
     margin-top: 1rem; /* Optional: Abstand über den Mitgliedern */
 }
 
 .team-member {
-    width: 150px; /* Beispiel für die Breite eines Mitglieds */
-    margin: 0 1rem; /* Optional: Abstand zwischen den Mitgliedern */
-    text-align: center; /* Texte zentrieren */
+    display: flex; /* Aktiviert Flexbox für jedes Mitglied */
+    flex-direction: column; /* Anordnung: Bild oben, Name unten */
+    align-items: center; /* Zentriert die Inhalte horizontal */
+    text-align: center; /* Text zentrieren */
+    margin: 1rem; /* Abstand zwischen den Mitgliedern */
+    width: 150px; /* Optionale Breite für jedes Mitglied */
 }
 
 .team-member img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border: none;
     margin-bottom: 0.5rem;
 }
 
 .team-member-name, .team-member-position {
-    text-align: center; /* Center the text */
-    font-size: 1.2rem;
+    margin: 0;
+    font-size: 1rem;
     color: var(--dark); 
     font-weight: bold;
 }
