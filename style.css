@@ -498,19 +498,17 @@ img, video {
 }
 
 .team-members {
-    display: flex; /* Set display to flex */
-    justify-content: space-around; /* Ensure even spacing */
-    flex-wrap: wrap; /* Allow wrapping */
-    margin-top: 1rem; /* Optional: To create space above the member section */
+    display: flex; /* Aktiviere Flexbox */
+    justify-content: space-between; /* Verteilt den Platz gleichmäßig */
+    align-items: center; /* Zentriert die Elemente vertikal */
+    flex-wrap: wrap; /* Erlaubt Umbrüche bei kleineren Bildschirmen */
+    margin-top: 1rem; /* Optional: Abstand über den Mitgliedern */
 }
 
 .team-member {
-    text-align: center;
-    flex-direction: column; /* Bilder und Namen untereinander anordnen */
-    align-items: center; /* Inhalte horizontal zentrieren */
-    text-align: center; /* Text zentrieren */
-    display: flex;
-    margin: 0 10px;
+    width: 150px; /* Beispiel für die Breite eines Mitglieds */
+    margin: 0 1rem; /* Optional: Abstand zwischen den Mitgliedern */
+    text-align: center; /* Texte zentrieren */
 }
 
 .team-member img {
