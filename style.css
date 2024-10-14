@@ -480,7 +480,7 @@ img, video {
     background-color: var(--28); /* Konsortien farblich differenzieren */
     padding: 2rem 20px; 
     margin: 2rem auto; 
-    max-width: 2000px; /* Set a maximum width for the boxes */
+    max-width: auto; /* Set a maximum width for the boxes */
     border-radius: 8px; /* Optional: To soften corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
     width: calc(100% - 5px); /* Breite anpassen mit Abstand zum Seitenrand */
