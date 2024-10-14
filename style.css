@@ -486,7 +486,7 @@ img, video {
 }
 
 .consortium-members img {
-    width: 100px; /* oder die gewünschte Größe */
+    width: 30px; /* oder die gewünschte Größe */
     height: auto; /* um das Seitenverhältnis zu erhalten */
 }
 
