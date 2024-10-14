@@ -468,7 +468,7 @@ img, video {
 
 /* -------------------TEAM-Page----------------------*/
 .consortium-members {
-    background-color: var(#e8e8e8); /* Konsortien farblich differenzieren */
+    background-color: var(--20); /* Konsortien farblich differenzieren */
     padding: 2rem; 
     margin: 2rem auto; 
     max-width: 800px; /* Set a maximum width for the boxes */
