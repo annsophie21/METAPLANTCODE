@@ -485,9 +485,10 @@ img, video {
     margin-bottom: 1.5rem;
 }
 
-.consortium-members img {
+.country-flag {
     width: 30px; /* oder die gewünschte Größe */
     height: auto; /* um das Seitenverhältnis zu erhalten */
+    margin-right: 8px; 
 }
 
 .team-members {
@@ -503,8 +504,6 @@ img, video {
     align-items: center; /* Inhalte horizontal zentrieren */
     text-align: center; /* Text zentrieren */
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Damit sie nebeneinander angezeigt werden */
 }
 
 .team-member img {
