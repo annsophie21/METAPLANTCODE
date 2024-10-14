@@ -473,6 +473,12 @@ img, video {
     margin: 2rem 0;
 }
 
+.consortium-members {
+    background-color: var(--field); /* Konsortien farblich differenzieren */
+    padding: 1rem; 
+    margin: 1rem 0; 
+}
+
 .cons-consortium-header {
     font-size: 1.5rem;
     font-weight: bold;
@@ -481,10 +487,15 @@ img, video {
     margin-bottom: 1.5rem;
 }
 
+.consortium-members img {
+    width: 150px; /* oder die gewünschte Größe */
+    height: auto; /* um das Seitenverhältnis zu erhalten */
+}
+
 .team-members {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Damit sie nebeneinander angezeigt werden */
 }
 
 .team-member {
@@ -498,7 +509,7 @@ img, video {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 2px solid var(--dark);
+    border: none;
     margin-bottom: 0.5rem;
 }
 
