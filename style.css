@@ -470,7 +470,10 @@ img, video {
 .consortium-members {
     background-color: var(--2); /* Konsortien farblich differenzieren */
     padding: 2rem; 
-    margin: 2rem 0; 
+    margin: 2rem auto; 
+    max-width: 800px; /* Set a maximum width for the boxes */
+    border-radius: 8px; /* Optional: To soften corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
 }
 
 .cons-consortium-header {
@@ -482,8 +485,15 @@ img, video {
 }
 
 .consortium-members img {
-    width: 150px; /* oder die gewünschte Größe */
+    width: 100px; /* oder die gewünschte Größe */
     height: auto; /* um das Seitenverhältnis zu erhalten */
+}
+
+.team-members {
+    display: flex; /* Set display to flex */
+    justify-content: space-around; /* Ensure even spacing */
+    flex-wrap: wrap; /* Allow wrapping */
+    margin-top: 1rem; /* Optional: To create space above the member section */
 }
 
 .team-member {
@@ -505,15 +515,11 @@ img, video {
     margin-bottom: 0.5rem;
 }
 
-.team-member-name {
+.team-member-name, .team-member-position {
+    text-align: center; /* Center the text */
     font-size: 1.2rem;
-    color: var(--dark);
+    color: var(--dark); 
     font-weight: bold;
-}
-
-.team-member-position {
-    font-size: 1rem;
-    color: var(--1);
 }
 
 /* Responsive Adjustments */
