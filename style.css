@@ -554,6 +554,16 @@ img, video {
 }
 
 /* Kontakt-Text */
+.contact a {
+    color: --27; /* Ändert die Farbe des Links zu Blau */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+.contact a:hover {
+    color: --27 100%; /* Ändert die Farbe beim Hover-Effekt */
+    text-decoration: underline; /* Unterstreicht den Link beim Hover */
+}
+
 .contact {
     text-align: center; /* Zentriere den Text */
     font-size: 1rem; /* Textgröße */
