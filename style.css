@@ -467,16 +467,10 @@ img, video {
 }
 
 /* -------------------TEAM-Page----------------------*/
-.team-consortium {
-    background-color: var(--2); /* Hellgraue Box */
-    padding: 2rem;
-    margin: 2rem 0;
-}
-
 .consortium-members {
-    background-color: var(--field); /* Konsortien farblich differenzieren */
-    padding: 1rem; 
-    margin: 1rem 0; 
+    background-color: var(--2); /* Konsortien farblich differenzieren */
+    padding: 2rem; 
+    margin: 2rem 0; 
 }
 
 .cons-consortium-header {
@@ -492,17 +486,14 @@ img, video {
     height: auto; /* um das Seitenverhältnis zu erhalten */
 }
 
-.team-members {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Damit sie nebeneinander angezeigt werden */
-}
-
 .team-member {
     text-align: center;
     flex-direction: column; /* Bilder und Namen untereinander anordnen */
     align-items: center; /* Inhalte horizontal zentrieren */
     text-align: center; /* Text zentrieren */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Damit sie nebeneinander angezeigt werden */
 }
 
 .team-member img {
