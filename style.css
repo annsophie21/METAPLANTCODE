@@ -566,7 +566,7 @@ summary{
 
 /* Work Packages */
 .workpackage-box {
-    max-width: 2000px; /* Maximale Breite */
+    max-width: 1500px; /* Maximale Breite */
     margin: 2rem auto; /* Zentrieren und Abstand nach oben/unten */
     padding: 2rem;
     background-color: var(--28); /* Box-Farbe */
