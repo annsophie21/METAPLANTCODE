@@ -565,8 +565,8 @@ summary{
 }
 
 /* Work Packages */
-.workpackages {
-    max-width: 2000px;
+.workpackage-box {
+    max-width: 2000px; /* Maximale Breite */
     margin: 2rem auto; /* Zentrieren und Abstand nach oben/unten */
     padding: 2rem;
     background-color: var(--28); /* Box-Farbe */
@@ -574,26 +574,26 @@ summary{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
 }
 
-/* Kontakt-Text */
-.wp a {
-    color: --27; /* Ändert die Farbe des Links zu Blau */
-    text-decoration: none; /* Entfernt die Unterstreichung */
+/* WP-Link-Stil */
+.wp h2 a {
+    color: black; /* Normale Schriftfarbe */
+    text-decoration: none; /* Unterstreichung entfernen */
 }
 
-.wp a:hover {
-    color: --27 100%; /* Ändert die Farbe beim Hover-Effekt */
-    text-decoration: underline; /* Unterstreicht den Link beim Hover */
+.wp h2 a:hover {
+    color: var(--active); /* Hover-Farbe */
 }
 
+/* WP-Beschreibung */
 .wp-description {
-    text-align: center; /* Zentriere den Text */
+    text-align: center; /* Zentrierte Beschreibung */
     font-size: 1rem; /* Textgröße */
 }
 
 /* Mail hervorheben */
 .wp-description strong {
-    font-weight: bold;
-    color: var(--dark); /* Hebt das "Mail" hervor */
+    font-weight: bold; /* Fett drucken */
+    color: var(--dark); /* Hebt den Lead Beneficiary hervor */
 }
 
 /* -------------------RESOURCE----------------------*/
