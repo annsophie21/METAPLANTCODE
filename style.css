@@ -88,7 +88,11 @@
   clear: both;
 }
 
-  .menu{
+.hamburger {
+  display: none; /* Nur für mobile Geräte */
+}
+
+.menu{
     width:100%;
     height: 5rem;
     position: sticky;
@@ -537,14 +541,6 @@ a.news:hover{
 }
 
 /* -------------------Mobile-Version----------------------*/
-/* Menü-Standardzustand */
-.menu ul {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
 
 /* Hamburger-Button Styling */
 .menu-toggle {
@@ -609,28 +605,43 @@ a.news:hover{
 }
 
 
-@media only screen and (max-width: 768px) {
-  .menu ul {
-    display: none; /* Versteckt das Menü zunächst */
-    flex-direction: column;
-    position: absolute;
-    top: 3rem;
-    left: 0;
-    width: 100%;
-    background-color: var(--28);
-    padding: 1rem;
-    z-index: 100;
-  }
+/* Mobile-Version: Hamburger-Menü einblenden, Normales Menü ausblenden */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Normales Menü ausblenden */
+    }
 
-  .menu ul li {
-    margin: 1rem 0;
-  }
+    .hamburger {
+        display: flex; /* Hamburger Icon sichtbar */
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
 
-  .menu-toggle {
-    display: block; /* Zeigt den Hamburger-Button auf mobilen Geräten */
-  }
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: var(--dark);
+    }
 
-  .menu-active ul {
-    display: flex; /* Zeigt das Menü, wenn es aktiv ist */
-  }
+    .menu.open {
+        display: flex; /* Menü wird angezeigt, wenn auf Hamburger-Icon geklickt */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        background-color: var(--28);
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
 }
