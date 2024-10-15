@@ -660,13 +660,14 @@ summary{
 
 /* Kontakt-Text */
 .contact a {
-    color: --27; /* Ändert die Farbe des Links zu Blau */
-    text-decoration: none; /* Entfernt die Unterstreichung */
+    color: black; /* Normale Schriftfarbe */
+    text-decoration: none; /* Unterstreichung entfernen */
 }
 
+
 .contact a:hover {
-    color: --27 100%; /* Ändert die Farbe beim Hover-Effekt */
-    text-decoration: underline; /* Unterstreicht den Link beim Hover */
+    color: var(--active); /* Hover-Farbe */
+    text-decoration: none; /* Unterstreichung entfernen */
 }
 
 .contact {
