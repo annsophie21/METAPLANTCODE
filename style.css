@@ -596,6 +596,13 @@ summary{
     color: var(--dark); /* Hebt den Lead Beneficiary hervor */
 }
 
+/* Logo in WP-Boxen kleiner darstellen */
+.wp-description img {
+    max-height: 50px; /* Setzt die maximale Höhe auf 50px */
+    margin-left: 1rem; /* Fügt etwas Abstand zum Text hinzu */
+    vertical-align: middle; /* Zentriert das Bild vertikal zum Text */
+}
+
 /* -------------------RESOURCE----------------------*/
 /* Resource-Box */
 .resource-box {
