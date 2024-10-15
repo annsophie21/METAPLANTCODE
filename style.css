@@ -541,9 +541,11 @@ div.content-aboutus{
   padding-right: 20rem;
 }
 
-.item-aboutus{
-  background-color: var(--field);
-  padding:2rem;
+.item-aboutus {
+    background-color: var(--field);
+    padding: 2rem;
+    border-radius: 8px; /* Runde Ecken hinzufügen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
 }
 
 h1.item-aboutus{
@@ -566,12 +568,12 @@ summary{
 
 /* Work Packages */
 .workpackage-box {
-    max-width: 1500px; /* Maximale Breite */
-    margin: 2rem auto; /* Zentrieren und Abstand nach oben/unten */
+    max-width: 1500px;
+    margin: 2rem auto;
     padding: 2rem;
-    background-color: var(--28); /* Box-Farbe */
-    border-radius: 8px; /* Abrundung der Ecken */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+    background-color: var(--field); /* Gleiche Hintergrundfarbe wie "About Us" */
+    border-radius: 8px; /* Runde Ecken wie "About Us" */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gleicher Schatten wie "About Us" */
 }
 
 /* WP-Link-Stil */
@@ -601,6 +603,26 @@ summary{
     max-height: 50px; /* Setzt die maximale Höhe auf 50px */
     margin-left: 1rem; /* Fügt etwas Abstand zum Text hinzu */
     vertical-align: middle; /* Zentriert das Bild vertikal zum Text */
+}
+
+
+.funders{  
+  background: var(--dl-grad);
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
+.funders-container{
+  display:flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.funder-logo{
+  height:5rem;
+  padding:1rem;
 }
 
 /* -------------------RESOURCE----------------------*/
