@@ -537,6 +537,26 @@ a.news:hover{
 }
 
 /* -------------------Mobile-Version----------------------*/
+/* Menü-Standardzustand */
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Hamburger-Button Styling */
+.menu-toggle {
+  display: none; /* Nur für Mobile sichtbar */
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+/* Für Mobilgeräte */
 @media only screen and (max-width: 1800px) {
 
   div.content, div.content-aboutus {
@@ -585,5 +605,32 @@ a.news:hover{
   .funders{
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .menu ul {
+    display: none; /* Versteckt das Menü zunächst */
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--28);
+    padding: 1rem;
+    z-index: 100;
+  }
+
+  .menu ul li {
+    margin: 1rem 0;
+  }
+
+  .menu-toggle {
+    display: block; /* Zeigt den Hamburger-Button auf mobilen Geräten */
+  }
+
+  .menu-active ul {
+    display: flex; /* Zeigt das Menü, wenn es aktiv ist */
   }
 }
