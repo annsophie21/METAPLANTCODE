@@ -73,11 +73,14 @@
         }    
     };
 
-    // Code für das ausklappbare Menü hinzufügen
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuList = document.getElementById('menu-list');
+// Code für das ausklappbare Menü hinzufügen
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
 
     menuToggle.addEventListener('click', function() {
-        menuList.classList.toggle('menu-active');
+        menu.classList.toggle('open'); // Menü ein- oder ausblenden
     });
+});
+
 </script>
