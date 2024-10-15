@@ -507,6 +507,95 @@ a.news:hover{
     }
 }
 
+/* -------------------WORK PACKAGES----------------------*/
+
+.photo-box{
+  width: 90%;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-credit{
+  position: absolute;
+  right:0.25rem;
+  bottom:0.5rem;    
+}
+
+.photo-credit p{
+  background: var(--dark);
+  opacity: 0.5;
+  color: var(--field);
+  padding:0.5rem;
+  border-radius: 0.5rem;
+}
+
+.spacer{
+  height: 10rem;
+  background-color: white;
+}
+
+div.content-aboutus{
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.item-aboutus{
+  background-color: var(--field);
+  padding:2rem;
+}
+
+h1.item-aboutus{
+  margin: 2rem 0 0 0;
+  padding: 1rem 0 2rem 2rem;
+  color: var(--dark);
+  background: var(--field-header);
+  text-align: left;
+}
+
+details{
+  margin-top: 2rem;
+}
+
+summary{
+  font-weight: bold;
+  color:var(--active);
+  list-style-image: none;
+}
+
+/* Work Packages */
+.workpackages {
+    max-width: 2000px;
+    margin: 2rem auto; /* Zentrieren und Abstand nach oben/unten */
+    padding: 2rem;
+    background-color: var(--28); /* Box-Farbe */
+    border-radius: 8px; /* Abrundung der Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+}
+
+/* Kontakt-Text */
+.wp a {
+    color: --27; /* Ändert die Farbe des Links zu Blau */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+.wp a:hover {
+    color: --27 100%; /* Ändert die Farbe beim Hover-Effekt */
+    text-decoration: underline; /* Unterstreicht den Link beim Hover */
+}
+
+.wp-description {
+    text-align: center; /* Zentriere den Text */
+    font-size: 1rem; /* Textgröße */
+}
+
+/* Mail hervorheben */
+.wp-description strong {
+    font-weight: bold;
+    color: var(--dark); /* Hebt das "Mail" hervor */
+}
+
 /* -------------------RESOURCE----------------------*/
 /* Resource-Box */
 .resource-box {
