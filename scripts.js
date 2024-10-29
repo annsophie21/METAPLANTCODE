@@ -43,33 +43,5 @@
         }    
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
-        // Menü-Toggle
-        const menuToggle = document.querySelector('.hamburger');
-        const menu = document.querySelector('.menu');
 
-        if (menuToggle) {
-            menuToggle.addEventListener('click', function() {
-                menu.classList.toggle('open');
-            });
-        }
-
-        // Funktion für das Ein- und Ausklappen
-        function toggleDetails(event) {
-            event.preventDefault();  // Verhindert das Springen nach oben
-            const details = event.target.nextElementSibling;  // Greift auf das nächste Element zu
-            
-            if (details.style.display === "none" || details.style.display === "") {
-                details.style.display = "block"; // Zeigt den Inhalt an
-            } else {
-                details.style.display = "none"; // Verbirgt den Inhalt
-            }
-        }
-
-        // Event-Listener für alle expand-toggle-Links hinzufügen
-        const toggleLinks = document.querySelectorAll('.expand-toggle');
-        toggleLinks.forEach(link => {
-            link.addEventListener('click', toggleDetails);
-        });
-    });
 </script>
