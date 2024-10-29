@@ -85,15 +85,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* Versteckter Bereich bei den Workpackages*/
 function toggleDetails(event) {
-    event.preventDefault(); // Verhindert das Standardverhalten des Links
+    event.preventDefault();
     const details = event.target.nextElementSibling;
     
     if (details.style.display === "none" || details.style.display === "") {
         details.style.display = "block";
-        event.target.textContent = "▼ Details verbergen"; // Text ändern, wenn geöffnet
+        event.target.textContent = "▼ Participants verbergen";
     } else {
         details.style.display = "none";
-        event.target.textContent = "▶ Details anzeigen"; // Text zurücksetzen, wenn geschlossen
+        event.target.textContent = "▶ Participants anzeigen";
     }
 }
 
