@@ -83,4 +83,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+/* Versteckter Bereich bei den Workpackages*/
+function toggleDetails(event) {
+    event.preventDefault(); // Verhindert das Standardverhalten des Links
+    const details = event.target.nextElementSibling;
+    
+    if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block";
+        event.target.textContent = "▼ Details verbergen"; // Text ändern, wenn geöffnet
+    } else {
+        details.style.display = "none";
+        event.target.textContent = "▶ Details anzeigen"; // Text zurücksetzen, wenn geschlossen
+    }
+}
+
 </script>
