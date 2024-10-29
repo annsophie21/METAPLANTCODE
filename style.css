@@ -617,15 +617,6 @@ summary{
     text-decoration: underline;
 }
 
-/* Versteckter Bereich */
-.wp-details {
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: var(--field);
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optionaler Schatten */
-}
-
 /* Anpassung des Tabellenlayouts für die Teilnehmer */
 .participants td {
     padding: 0.5rem;
