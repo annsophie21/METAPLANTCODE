@@ -85,16 +85,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* Versteckter Bereich bei den Workpackages*/
 function toggleDetails(event) {
-    event.preventDefault();
+    event.preventDefault(); // Verhindert das Springen zum Seitenanfang
     const details = event.target.nextElementSibling;
-    
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
-        event.target.textContent = "▼ Participants verbergen";
+    if (details.style.display === "none" || !details.style.display) {
+        details.style.display = "table"; // Einblenden
     } else {
-        details.style.display = "none";
-        event.target.textContent = "▶ Participants anzeigen";
+        details.style.display = "none"; // Ausblenden
     }
+}
 }
 
 </script>
