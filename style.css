@@ -610,6 +610,8 @@ summary{
   background: var(--dl-grad);
   margin-left: 20rem;
   margin-right: 20rem;
+  border-radius: 8px; /* Runde Ecken falls gewünscht */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatteneffekt */
 }
 
 .funders-container{
