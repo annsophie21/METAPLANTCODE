@@ -544,7 +544,7 @@ div.content-aboutus{
 .item-aboutus {
     background-color: var(--field);
     padding: 2rem;
-    border-radius: 8px; /* Runde Ecken hinzufügen */
+    border-radius: 0.5rem; /* Runde Ecken hinzufügen */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
 }
 
@@ -571,9 +571,9 @@ summary{
     max-width: 1500px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: var(--field); /* Gleiche Hintergrundfarbe wie "About Us" */
-    border-radius: 8px; /* Runde Ecken wie "About Us" */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gleicher Schatten wie "About Us" */
+    background-color: var(--field); 
+    border-radius: 8px; /* Runde Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten */
 }
 
 /* WP-Link-Stil */
