@@ -607,7 +607,7 @@ summary{
 
 /* Pfeil und hover-Effekt */
 .expand-toggle {
-    color: green;
+    color: #7AC142; /* Hellgrüner Farbcode */
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
@@ -625,6 +625,23 @@ summary{
     background-color: var(--field);
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optionaler Schatten */
+}
+
+/* Anpassung des Tabellenlayouts für die Teilnehmer */
+.participants td {
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+
+.flag {
+    height: 30px;
+    margin-left: 0.5rem;
+}
+
+.institution {
+    height: 30px;
+    margin-left: auto; /* Rechtsbündige Positionierung des Logos */
+    display: block;
 }
 
 .funders{  
