@@ -605,6 +605,27 @@ summary{
     vertical-align: middle; /* Zentriert das Bild vertikal zum Text */
 }
 
+/* Pfeil und hover-Effekt */
+.expand-toggle {
+    color: green;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.expand-toggle:hover {
+    text-decoration: underline;
+}
+
+/* Versteckter Bereich */
+.wp-details {
+    display: none; /* Start als versteckt */
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--field);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optionaler Schatten */
+}
 
 .funders{  
   background: var(--dl-grad);
@@ -665,7 +686,6 @@ summary{
     color: black; /* Normale Schriftfarbe */
     text-decoration: none; /* Unterstreichung entfernen */
 }
-
 
 .contact a:hover {
     color: var(--active); /* Hover-Farbe */
