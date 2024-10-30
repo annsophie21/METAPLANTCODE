@@ -509,7 +509,8 @@ a.news:hover{
 
 /* -------------------WORK PACKAGES----------------------*/
 
-.photo-box{
+/* Zentrale Bildbox */
+.photo-box {
   width: 90%;
   position: relative;
   display: block;
@@ -517,38 +518,40 @@ a.news:hover{
   margin-right: auto;
 }
 
-.photo-credit{
+.photo-credit {
   position: absolute;
-  right:0.25rem;
-  bottom:0.5rem;    
+  right: 0.25rem;
+  bottom: 0.5rem;
 }
 
-.photo-credit p{
+.photo-credit p {
   background: var(--dark);
   opacity: 0.5;
   color: var(--field);
-  padding:0.5rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
-.spacer{
+/* Abstandhalter */
+.spacer {
   height: 10rem;
   background-color: white;
 }
 
-div.content-aboutus{
+/* Hauptinhalt */
+div.content-aboutus {
   padding-left: 20rem;
   padding-right: 20rem;
 }
 
 .item-aboutus {
-    background-color: var(--field);
-    padding: 2rem;
-    border-radius: 0.5rem; /* Runde Ecken hinzufügen */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
+  background-color: var(--field);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1.item-aboutus{
+h1.item-aboutus {
   margin: 2rem 0 0 0;
   padding: 1rem 0 2rem 2rem;
   color: var(--dark);
@@ -556,130 +559,99 @@ h1.item-aboutus{
   text-align: left;
 }
 
-details{
+details {
   margin-top: 2rem;
 }
 
-summary{
+summary {
   font-weight: bold;
-  color:var(--active);
+  color: var(--active);
+  cursor: pointer;
   list-style-image: none;
 }
 
 /* Work Packages */
 .workpackage-box {
-    max-width: 1500px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: var(--field); 
-    border-radius: 8px; /* Runde Ecken */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten */
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--field);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* WP-Link-Stil */
 .wp h2 a {
-    color: black; /* Normale Schriftfarbe */
-    text-decoration: none; /* Unterstreichung entfernen */
+  color: black;
+  text-decoration: none;
 }
 
 .wp h2 a:hover {
-    color: var(--active); /* Hover-Farbe */
+  color: var(--active);
 }
 
-/* WP-Beschreibung */
 .wp-description {
-    text-align: center; /* Zentrierte Beschreibung */
-    font-size: 1rem; /* Textgröße */
+  text-align: center;
+  font-size: 1rem;
 }
 
-/* Mail hervorheben */
 .wp-description strong {
-    font-weight: bold; /* Fett drucken */
-    color: var(--dark); /* Hebt den Lead Beneficiary hervor */
+  font-weight: bold;
+  color: var(--dark);
 }
 
-/* Logo in WP-Boxen kleiner darstellen */
 .wp-description img {
-    max-height: 50px; /* Setzt die maximale Höhe auf 50px */
-    margin-left: 1rem; /* Fügt etwas Abstand zum Text hinzu */
-    vertical-align: middle; /* Zentriert das Bild vertikal zum Text */
+  max-height: 50px;
+  margin-left: 1rem;
+  vertical-align: middle;
 }
 
-/* Pfeil und hover-Effekt */
-.expand-toggle {
-    color: #7AC142; /* Hellgrüner Farbcode */
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.expand-toggle:hover {
-    text-decoration: underline;
-}
-
-/* Anpassung des Tabellenlayouts für die Teilnehmer */
-.participants td {
-    padding: 0.5rem;
-    vertical-align: middle;
-}
-/* Tabelle in der Box gleichmäßig verteilen und zentrieren */
+/* Tabelle Teilnehmer - Layout */
 table.participants {
-    width: 100%; 
-    border-collapse: collapse;
-    table-layout: fixed; /* Gleichmäßige Spaltenbreite */
-    text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
-/* Zellenabstand und Randlinie */
-table.participants td {
-    padding: 1rem; /* Abstand in den Zellen */
-    vertical-align: top; /* Inhalt am oberen Rand */
+td.org-name {
+  text-align: left;
+  font-weight: bold;
+  padding: 1rem;
+  color: var(--dark);
 }
 
-/* Flaggen und Länder übereinander anordnen */
-.country-cell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+td.org-logo {
+  text-align: center;
 }
 
-table.participants .flag {
-    display: block;
-    margin: 0 auto;
-    height: 30px;
+td.org-flag {
+  text-align: right;
 }
 
-table.participants .country-name {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: var(--dark);
+td.org-logo img,
+.flag {
+  height: 30px;
+  display: block;
+  margin: 0 auto;
 }
 
-.institution {
-    height: 30px;
-    margin-left: auto; /* Rechtsbündige Positionierung des Logos */
-    display: block;
-}
-
-.funders{  
+/* Funders */
+.funders {
   background: var(--dl-grad);
-  margin-left: 20rem;
-  margin-right: 20rem;
-  border-radius: 8px; /* Runde Ecken falls gewünscht */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatteneffekt */
+  margin: 20rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.funders-container{
-  display:flex;
+.funders-container {
+  display: flex;
   flex-wrap: wrap;
   padding: 2rem;
   justify-content: space-around;
-  align-content: space-around;
 }
 
-.funder-logo{
-  height:5rem;
-  padding:1rem;
+.funder-logo {
+  height: 5rem;
+  padding: 1rem;
 }
 
 /* -------------------RESOURCE----------------------*/
