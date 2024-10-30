@@ -624,17 +624,15 @@ summary{
 }
 /* Tabelle in der Box gleichmäßig verteilen und zentrieren */
 table.participants {
-    width: 100%; /* Vollbreite für gleichmäßige Verteilung */
-    text-align: center;
-    border-collapse: collapse;
+    width: 100%; /* Nutzt die gesamte Breite der Box */
+    text-align: center; /* Zentriert den Text */
+    border-collapse: collapse; /* Entfernt die Abstände zwischen den Tabellenzellen */
 }
 
 /* Zellenabstand und Randlinie */
 table.participants td {
-    display: flex;
-    flex-direction: column; /* Macht Flagge und Ländername vertikal */
-    align-items: center; /* Zentriert Inhalt horizontal */
-    padding: 1rem;
+    padding: 1rem; /* Abstand in den Zellen */
+    vertical-align: top; /* Inhalt am oberen Rand */
 }
 
 /* Flaggen und Länder übereinander anordnen */
@@ -651,13 +649,8 @@ table.participants .country-name {
 }
 
 .flag {
-    width: 30px; /* Flaggenbreite anpassen */
-}
-
-.country-name {
-    margin-top: 0.3rem; /* Abstand zur Flagge */
-    font-size: 0.9rem;
-    color: var(--dark); /* Optional: Textfarbe */
+    height: 30px;
+    margin-left: 0.5rem;
 }
 
 .institution {
