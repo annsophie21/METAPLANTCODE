@@ -622,6 +622,31 @@ summary{
     padding: 0.5rem;
     vertical-align: middle;
 }
+/* Tabelle in der Box gleichmäßig verteilen und zentrieren */
+table.participants {
+    width: 100%; /* Nutzt die gesamte Breite der Box */
+    text-align: center; /* Zentriert den Text */
+    border-collapse: collapse; /* Entfernt die Abstände zwischen den Tabellenzellen */
+}
+
+/* Zellenabstand und Randlinie */
+table.participants td {
+    padding: 1rem; /* Abstand in den Zellen */
+    vertical-align: top; /* Inhalt am oberen Rand */
+}
+
+/* Flaggen und Länder übereinander anordnen */
+table.participants .flag {
+    display: block; /* Block-Level-Element für Flagge */
+    margin: 0 auto; /* Zentriert die Flagge */
+}
+
+table.participants .country-name {
+    display: block; /* Block-Level für Ländername */
+    margin-top: 0.5rem; /* Abstand zur Flagge */
+    font-size: 0.9rem; /* Optional kleinere Schriftgröße */
+    color: var(--dark); /* Farbe anpassen, falls gewünscht */
+}
 
 .flag {
     height: 30px;
