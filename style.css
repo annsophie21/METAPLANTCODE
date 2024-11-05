@@ -609,11 +609,11 @@ summary {
 table.participants {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 td.org-name {
-  text-align: left;
+  text-align: center;
   font-weight: bold;
   padding: 1rem;
   color: var(--dark);
@@ -625,11 +625,12 @@ td.org-logo {
 
 td.org-flag {
   text-align: right;
+  padding-right: 1rem;
 }
 
 td.org-logo img,
 .flag {
-  height: 50px;
+  height: 80px;
   display: block;
   margin: 0 auto;
 }
