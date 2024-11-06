@@ -613,7 +613,7 @@ table.participants {
 }
 
 td.org-name {
-  text-align: center;
+  text-align: left;
   font-weight: bold;
   padding: 1rem;
   color: var(--dark);
@@ -630,7 +630,7 @@ td.org-flag {
 
 td.org-logo img,
 .flag {
-  height: 80px;
+  height: 60px;
   display: block;
   margin: 0 auto;
 }
