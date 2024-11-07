@@ -608,9 +608,9 @@ vertical-align: middle;
 /* Tabelle Teilnehmer - Layout */
 table.participants {
 width: 100%;
-border-collapse: collapse;
+border-collapse: separate;
+border-spacing: 0 1.5rem;
 table-layout: auto;
-maring-bottom: 1rem
 }
 
 td.org-name,
