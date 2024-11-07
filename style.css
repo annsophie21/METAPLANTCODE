@@ -610,6 +610,14 @@ table.participants {
 width: 100%;
 border-collapse: collapse;
 table-layout: auto;
+maring-bottom: 1rem
+}
+
+td.org-name,
+td.org-logo,
+td.org-flag {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 td.org-name {
