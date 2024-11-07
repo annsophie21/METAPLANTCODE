@@ -639,7 +639,6 @@ td.org-flag span.country-name {
   display: block;
   margin-top: 0.25rem;
   font-weight: bold;
-  color: var(--dark);
 }
 
 /* Funders */
