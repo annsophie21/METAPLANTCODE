@@ -640,7 +640,7 @@ height: 60px;
 display: block;
 }
 
-.flag-container p {
+.country-name {
   margin: 0;
   font-size: 0.9rem; /* Schriftgröße kann angepasst werden */
   color: var(--dark); /* Optional, wenn Farbe angepasst werden soll */
