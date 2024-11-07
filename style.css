@@ -1,589 +1,829 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <link rel="icon" href="../pics/M-logo.png">
-    <title>METAPLANTCODE - WORK PACKAGE</title>
-    
-</head>
+:root{ 
+  --dark: #0f3b60;
+  --light: #1ca4a6;
+  --active: #98c01e; 
+  --dl-grad: linear-gradient(270deg,#0f3b60, #1ca4a6);
+  --field: #f6f6f6;
+  --field-header: linear-gradient(to top, #f6f6f6, #1ca4a6);    
+  --1: #000000;
+  --2: #abb8c3;
+  --3: #FFF;
+  --4: #f78da7;
+  --5: #cf2e2e;
+  --6: #ff6900;
+  --7: #fcb900;
+  --8: #7bdcb5;
+  --9: #00d084;
+  --10: #8ed1fc;
+  --11: #0693e3;
+  --12: #9b51e0;
+  --13: #98c01e;
+  --14: #111;
+  --15: #767676;
+  --16: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);
+  --17: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);
+  --18: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);
+  --19: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);
+  --20: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);
+  --21: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);
+  --22: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);
+  --23: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);
+  --24: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);
+  --25: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);
+  --26: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);
+  --27: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
+  --28: #ededed;
+}
 
-<body>
-    <header> 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../style.css">
-        <link rel="icon" href="../pics/M-logo.png">
-        <title></title>
-        <style></style>
-        <div class="header-image">
-            <img style="height: 10rem; margin:auto;" src="../pics/metaplantlogo.png" alt="">
-        </div>
-        <div class="header-text">
-		    <p>Harmonizing plant metabarcoding pipelines in Europe 
-                    <br> to support monitoring activities in the field of plants 
-                    <br> and their functional organismic networks
-            </p>
-	    </div>
-    </header>
-	
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-      
-    <div class="menu">
-        <ul>
-            <li><div class="menu-item"><a href="../index.html">HOME</a></div></li>
-            <li><div class="vl"></div></li>
-            <li><div class="menu-item"><a href="../team/index.html">TEAM</a></div></li>
-            <li><div class="vl"></div></li>
-            <li><div class="menu-item"><a class="menu-active" href="../protocol/index.html">WORK PACKAGES</a></div></li>
-            <li><div class="vl"></div></li>
-            <li><div class="menu-item"><a href="../resources/index.html">RESOURCE</a></div></li>
-            <li><div class="vl"></div></li>
-            <li><div class="menu-item"><a href="../contact/index.html">CONTACT</a></div></li>
-        </ul>
-    </div>
-    <div class="content">
+@font-face {
+  font-family: "Nunito";
+  src: url(fonts/Nunito-VariableFont_wght.ttf) format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
 
-	    <h1 class="item">About us</h1>
+@font-face {
+  font-family: "Nunito";
+  src: url(fonts/Nunito-Italic-VariableFont_wght.ttf) format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
 
-	    <div class="item"><p>The METAPLANTCODE project aims to test and optimize pan-European case studies on metabarcoding, provide best practice recommendations, optimize analysis pipelines for species identification, and create easy-to-use reference databases. The project will identify and specify gaps, publish best practice documents on FAIR data publishing of plant metabarcode data to GBIF and the INSDC databases, and implement ELIXIR-compatible multimodal DL models in novel tools for stand-alone metabarcoding analyses using different data sources. The project will also enhance species identification accuracy through GBIF records and metadata and map regional, national, and international botanical taxonomic checklists, red lists, and floras to the Catalogue of Life (COL) through COL ChecklistBank. Furthermore, taxonomic and floristic literature will be semantically enriched with new entity recognition and relationship extraction modules to support the enhanced identification of species via domain-specific descriptive/phenotypic features. An interface will be provided to link taxonomic names to treatments, identify homonyms and synonyms, and facilitate the conversion and annotation of flora, red lists, and ecological treatments. All METAPLANTCODE products will be available at project end FAIR+. The project will support knowledge transfer with associated partners and stakeholders from the start. Relevant stakeholders will be identified, priorities set, communication channels established, monitored, and revised as needed. Greater stakeholder engagement, training, and outreach efforts will be undertaken to ensure that plant metabarcoding becomes a routine standard for biodiversity monitoring in Europe and beyond in the future.</p>
 
-	    <!-- <a class="item-link" href="#"><i class="arrow-right"></i> &nbsp; Link1</a> -->
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  text-align: justify;
+/*border: 1px solid red; */
+}
 
-	    </div>
-		
-		<div class="photo-box">
-			<img style="width:100%;padding-top:2rem;" src="../pics/group_picture.jpg" alt="Group Picture">
-			<div class="photo-credit"><p>(c) Petra Bock</p></div>
-		</div>
+body{
+  margin:0;
+  padding: 0;
+  line-height: 1.6;	  
+}
 
-    </div>
 
-	<div class="spacer" style="height:2rem;"></div>
+.header-image{
+width:100%; 
+height:10rem; 
+background:var(--dark); 
+display: inline-flex; align-items: center;
+}
 
-      <section class="workpackages">
-    <!--------------------- WP1 --------------------->
-    <div class="workpackage-box">
-        <div class="wp">
-            <h2><a href="https://github.com/orgs/metaplantcode/projects/2">WP1</a></h2>
-            <h2>Plant biodiversity monitoring use-cases (eDNA samples to sequences)</h2>
-            <div class="wp-description">
-                <p>We will highlight the feasibility of plant metabarcoding through a portfolio of complementary case studies of different source material, serving different monitoring needs and requiring different collection, laboratory and analysis workflows.</p>
-                <p><strong>Lead beneficiary: University of Oslo</strong><img src="../pics/university_of_oslo.png" alt="UniversityOfOslo" class="logo"></p>
-            </div>
-            
-            <!-- Versteckter Inhalt -->
-             <details>
-                <summary class="expand-toggle">Participants</summary>
-                <table class="participants">
-                    <tbody>
-                        <tr>
-                            <td class="org-name">University of Oslo</td>
-                            <td class="org-logo"><img src="../pics/university_of_oslo.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <div class="flag-container">
-                                    <img src="../pics/no.svg" alt="" class="flag"> 
-                                    <p>Norway</p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Universität Kassel</td>
-                            <td class="org-logo"><img src="../pics/university_kassel.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <div class="flag-container">
-                                    <img src="../pics/de.svg" alt="" class="flag"> 
-                                    <p>Germany</p>
-                                </div>
-                            </td>
-                        </tr>
-				        <tr>
-					        <td class="org-name">Naturalis Biodiversity Center</td>
-					        <td class="org-logo"><img src="../pics/naturalis_black.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <div class="flag-container">
-                                    <img src="../pics/nl.svg" alt="" class="flag"> 
-                                    <p>Netherlands</p>
-                                </div>
-                            </td>
-				        </tr>
-				        <tr>
-					        <td class="org-name">Centre for Research &amp; Technology, Hellas</td>
-					        <td class="org-logo"><img src="../pics/certh.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <div class="flag-container">
-                                    <img src="../pics/gr.svg" alt="" class="flag">
-                                    <p>Greece</p>
-                                </div>
-                            </td>
-				        </tr>
-				        <tr>
-					        <td class="org-name">Instituto Superior de Agronomia</td>
-					        <td class="org-logo"><img src="../pics/LogoISA.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <div class="flag-container">  
-                                    <img src="../pics/pt.svg" alt="" class="flag">
-                                    <p>Portugal</p>
-                                </div>
-                            </td>
-				        </tr>
-				        <tr>
-					        <td class="org-name">BIOPOLIS</td>
-					        <td class="org-logo"><img src="../pics/biopolis.svg" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <div class="flag-container">
-                                    <img src="../pics/pt.svg" alt="" class="flag">
-                                    <p>Portugal</p>
-                                </div>
-                            </td>
-				        </tr>
-				        <tr>
-					        <td class="org-name">Institutul Național de Cercetare-Dezvoltare pentru Științe Biologice</td>
-					        <td class="org-logo"><img src="../pics/incdsb.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <div class="flag-container">
-                                    <img src="../pics/ro.svg" alt="" class="flag">
-                                    <p>Romania</p>
-                                </div>
-                            </td>
-				        </tr>
-				        <tr>
-					        <td class="org-name">KU Leuven</td>
-					        <td class="org-logo"><img src="../pics/ku_leuven.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <div class="flag-container">
-                                    <img src="../pics/be.svg" alt="" class="flag">
-                                    <p>Belgium</p>
-                                </div>
-                            </td>
-				        </tr>
-			        </tbody>
-                </table>
-             </details>
-        </div>
-    </div>
+.header-text{
+width: 100%;  
+background: var(--dark);
+color: white;
+font-size: x-large;
+margin-top: -1rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
 
-    <!--------------------- WP2 --------------------->
-    <div class="workpackage-box">
-        <div class="wp">
-            <h2><a href="https://github.com/orgs/metaplantcode/projects/3">WP2</a></h2>
-	        <h2>Standardisation of eDNA bioinformatics pipelines (eDNA sequence to species)</h2>
-            <div class="wp-description">
-                <p>We will optimize reference databases, respectively gap identification and specification, provide best practice recommendations for the analysis of plant metabarcoding raw sequence data to taxon-level identification by screening and testing available tools, workflows and filters for datasets of different quality and complexity and develop optimized semi-automated tools and workflows for taxonomic identification via metabarcoding of plants.</p>
-                <p><strong>Lead beneficiary: Centre for Research & Technology, Hellas</strong><img src="../pics/certh.png" alt="CERTH" class="logo"></p>
-            </div>
+.header-text p{
+text-align: center;
+text-justify: auto;
+clear: both;
+}
 
-            <!-- Versteckter Inhalt -->
-            <details>
-                <summary class="expand-toggle">Participants</summary>
-                <table class="participants">
-                    <tbody>
-                        <tr>
-                            <td class="org-name">Centre for Research &amp; Technology, Hellas</td>
-                            <td class="org-logo"><img src="../pics/certh.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/gr.svg" alt="" class="flag">
-                                <span class="country-name">Greece</span>
-                            </td>				
-                        </tr>
-                        <tr>
-                            <td class="org-name">University of Oslo</td>
-                            <td class="org-logo"><img src="../pics/university_of_oslo.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/no.svg" alt="" class="flag">
-                                <span class="country-name">Norway</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Swedish Biodiversity Data Infrastructure</td>
-                            <td class="org-logo"><img src="../pics/sbdi.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/se.svg" alt="" class="flag">
-                                <span class="country-name">Sweden</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Naturalis Biodiversity Center</td>
-                            <td class="org-logo"><img src="../pics/naturalis_black.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/nl.svg" alt="" class="flag">
-                                <span class="country-name">Netherlands</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Instituto Superior de Agronomia</td>
-                            <td class="org-logo"><img src="../pics/LogoISA.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/pt.svg" alt="" class="flag">
-                                <span class="country-name">Portugal</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">BIOPOLIS</td>
-                            <td class="org-logo"><img src="../pics/biopolis.svg" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/pt.svg" alt="" class="flag">
-                                <span class="country-name">Portugal</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </details>
-        </div>
-    </div>
-	   
-    <!--------------------- WP3 --------------------->
-    <div class="workpackage-box">
-        <div class="wp">
-            <h2><a href="https://github.com/orgs/metaplantcode/projects/4">WP3</a></h2>
-	        <h2>Enhanced accuracy of species identification using multiple metadata integration</h2>
-            <div class="wp-description">
-                <p>We will use deep learning to combine metabarcoding data with biotic-geographic-habitat metadata to increase the accuracy of the taxonomic monitoring in respective geographic regions for monitoring programs, allowing the comparison of datasets over space and time.</p>
-                <p><strong>Lead beneficiary: Institut de Recherche pour le Développement - Unité de Modélisation Mathématique et Informatique des Systèmes Complexes</strong><img src="../pics/ird.png" alt="IRD" class="logo"></p>
-            </div>
-            
-            <!-- Versteckter Inhalt -->
-            <details>
-                <summary class="expand-toggle">Participants</summary>
-                <table class="participants">
-                    <tbody>
-                        <tr>
-					        <td class="org-name">Institut de Recherche pour le Développement <br> Unité de Modélisation Mathématique et Informatique des Systèmes Complexes</td>
-					        <td class="org-logo"><img src="../pics/ird.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/fr.svg" alt="" class="flag">
-                                <span class="country-name">France</span>
-                            </td>	
-				        </tr>
-				        <tr>
-					        <td class="org-name">University of Olso</td>
-					        <td class="org-logo"><img src="../pics/university_of_oslo.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/no.svg" alt="" class="flag">
-                                <span class="country-name">Norway</span>
-                            </td>
-				        </tr>
-				        <tr>
-					        <td class="org-name">Centre for Research &amp; Technology, Hellas</td>
-					        <td class="org-logo"><img src="../pics/certh.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/gr.svg" alt="" class="flag">
-                                <span class="country-name">Greece</span>
-                            </td>
-				        </tr>
-				        <tr>
-					        <td class="org-name">Haute école spécialisée de Suisse occidentale</td>
-					        <td class="org-logo"><img src="../pics/heso.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/ch.svg" alt="" class="flag">
-                                <span class="country-name">Switzerland</span>
-                            </td>
-			        	</tr>
-				        <tr>
-				        	<td class="org-name">Instituto Superior de Agronomia</td>
-				        	<td class="org-logo"><img src="../pics/LogoISA.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/pt.svg" alt="" class="flag">
-                                <span class="country-name">Portugal</span>
-                            </td>
-				        </tr>
-				        <tr>
-				        	<td class="org-name">BIOPOLIS</td>
-				        	<td class="org-logo"><img src="../pics/biopolis.svg" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/pt.svg" alt="" class="flag">
-                                <span class="country-name">Portugal</span>
-                            </td>
-				        </tr>
-			        </tbody>
-                </table>
-            </details>
-        </div>
-    </div>
+.hamburger {
+display: none; /* Nur für mobile Geräte */
+}
 
-    <!--------------------- WP4 --------------------->
-    <div class="workpackage-box">
-        <div class="wp">
-            <h2><a href="https://github.com/orgs/metaplantcode/projects/5">WP4</a></h2>
-	        <h2>Implement GBIF DNA-derived data publishing pipelines (eDNA occurrences to data)</h2>
-            <div class="wp-description">
-                <p>We will enable the comparison of plant metabarcoding results at an European scale by cross-walking existing institutional and national SOPs regarding plant metabarcoding and the development of community supported “Best practices on data and metadata capture for FAIR sharing of metabarcoding data with GBIF and the INSDC databases” in collaboration with the GBIF, ELIXIR, BIOSCAN Europe and Biodiversity Genomics Europe (BGE) communities.</p>
-                <p><strong>Lead beneficiary: Naturalis Biodiversity Center</strong><img src="../pics/naturalis_black.png" alt="NATURALIS" class="logo"></p>
-            </div>
-                        
-             <!-- Versteckter Inhalt -->
-             <details>
-                <summary class="expand-toggle">Participants</summary>
-                <table class="participants">
-                    <tbody>
-                        <tr>
-                            <td class="org-name">Naturalis Biodiversity Center</td>
-                            <td class="org-logo"><img src="../pics/naturalis_black.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/nl.svg" alt="" class="flag">
-                                <span class="country-name">Netherlands</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">University of Olso</td>
-                            <td class="org-logo"><img src="../pics/university_of_oslo.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/no.svg" alt="" class="flag">
-                                <span class="country-name">Norway</span>
-                            </td>
-                        </tr>
-                        <tr>
-                           <td class="org-name">Swedish Biodiversity Data Infrastructure</td>
-                           <td class="org-logo"><img src="../pics/sbdi.png" alt="" class="institution"></td>
-                           <td class="org-flag">
-                            <img src="../pics/se.svg" alt="" class="flag">
-                            <span class="country-name">Sweden</span>
-                        </td>
-                        </tr>
-                        <tr>
-                           <td class="org-name">Catalogue of Life</td>
-                           <td class="org-logo"><img src="../pics/col_logo.svg" alt="" class="flag"></td>
-                        </tr>
-                        <tr>
-                           <td class="org-name">Instituto Superior de Agronomia</td>
-                           <td class="org-logo"><img src="../pics/LogoISA.png" alt="" class="institution"></td>
-                           <td class="org-flag">
-                            <img src="../pics/pt.svg" alt="" class="flag">
-                            <span class="country-name">Portugal</span>
-                        </td>
-                        </tr>
-                        <tr>
-                           <td class="org-name">BIOPOLIS</td>
-                           <td class="org-logo"><img src="../pics/biopolis.svg" alt="" class="institution"></td>
-                           <td class="org-flag">
-                            <img src="../pics/pt.svg" alt="" class="flag">
-                            <span class="country-name">Portugal</span>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-             </details>
-        </div>
-    </div>
+.menu{
+  width:100%;
+  height: 5rem;
+  position: sticky;
+  background-color: white;
+  top:0;
+  z-index: 1;
+  box-shadow: 0 0 15px 1px var(--2); 
+  margin-bottom:5em; 
+}
 
-    <!--------------------- WP5 --------------------->
-    <div class="workpackage-box">
-        <div class="wp">
-            <h2><a href="https://github.com/orgs/metaplantcode/projects/6">WP5</a></h2>
-	        <h2>Mobilising reference treatments for taxonomic names</h2>
-            <div class="wp-description">
-                <p>We will compile and provide descriptions of vegetation or identification of species occurring at the test sites, enriched with new entity recognition and relationship extraction modules to enhance species identification.</p>
-                <p><strong>Lead beneficiary: Haute école spécialisée de Suisse occidentale </strong><img src="../pics/heso.png" alt="HES-SO" class="logo"></p>
-            </div>
-                                    
-            <!-- Versteckter Inhalt -->
-            <details>
-                <summary class="expand-toggle">Participants</summary>
-                <table class="participants">
-                    <tbody>
-                        <tr>
-                            <td class="org-name">Haute école spécialisée de Suisse occidentale</td>
-                            <td class="org-logo"><img src="../pics/heso.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/ch.svg" alt="" class="flag">
-                                <span class="country-name">Switzerland</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Plazi</td>
-                            <td class="org-logo"><img src="../pics/plazi.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/ch.svg" alt="" class="flag">
-                                <span class="country-name">Switzerland</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Catalogue of Life</td>
-                            <td class="org-logo"><img src="../pics/Col.jpg" alt="" class="flag"></td>
-                        </tr>						
-                    </tbody>
-                </table>
-            </details>
-        </div>
-    </div>
+.menu-item{
+  font-size: large;
+  text-align: center;
+}
 
-    <!--------------------- WP6 --------------------->
-    <div class="workpackage-box">
-        <div class="wp">
-            <h2><a href="https://github.com/orgs/metaplantcode/projects/7">WP6</a></h2>
-	        <h2>Management, training, dissemination and outreach, success monitoring</h2>
-            <div class="wp-description">
-                <p>We will manage interoperability between the different work packages, coordinate joint training (internal/external), publications and discussions, develop a stakeholder engagement and outreach strategy and assessment, and coordinate, manage, monitor, and support outreach activities and dissemination.</p>
-                <p><strong>Lead beneficiary: Universität Kassel</strong><img src="../pics/university_kassel.png" alt="CERTH" class="logo"></p>
-            </div>
-                                    
-            <!-- Versteckter Inhalt -->
-            <details>
-                <summary class="expand-toggle">Participants</summary>
-                <table class="participants">
-                    <tbody>
-                        <tr>
-                            <td class="org-name">University of Olso</td>
-                            <td class="org-logo"><img src="../pics/university_of_oslo.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/no.svg" alt="" class="flag">
-                                <span class="country-name">Norway</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Universität Kassel</td>
-                            <td class="org-logo"><img src="../pics/university_kassel.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/de.svg" alt="" class="flag">
-                                <span class="country-name">Germany</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Naturalis Biodiversity Center</td>
-                            <td class="org-logo"><img src="../pics/naturalis_black.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/nl.svg" alt="" class="flag">
-                                <span class="country-name">Netherlands</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Centre for Research &amp; Technology, Hellas</td>
-                            <td class="org-logo"><img src="../pics/certh.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/gr.svg" alt="" class="flag">
-                                <span class="country-name">Greece</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Instituto Superior de Agronomia</td>
-                            <td class="org-logo"><img src="../pics/LogoISA.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/pt.svg" alt="" class="flag">
-                                <span class="country-name">Portugal</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">BIOPOLIS</td>
-                            <td class="org-logo"><img src="../pics/biopolis.svg" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/pt.svg" alt="" class="flag">
-                                <span class="country-name">Portugal</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Institut de Recherche pour le Développement <br> Unité de Modélisation Mathématique et Informatique des Systèmes Complexes</td>
-                            <td class="org-logo"><img src="../pics/ird.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/fr.svg" alt="" class="flag">
-                                <span class="country-name">France</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Institutul Național de Cercetare-Dezvoltare pentru Științe Biologice</td>
-                            <td class="org-logo"><img src="../pics/incdsb.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/ro.svg" alt="" class="flag">
-                                <span class="country-name">Romania</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Haute école spécialisée de Suisse occidentale</td>
-                            <td class="org-logo"><img src="../pics/heso.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/ch.svg" alt="" class="flag">
-                                <span class="country-name">Switzerland</span>
-                            </td>		
-                        </tr>
-                        <tr>
-                            <td class="org-name">Plazi</td>
-                            <td class="org-logo"><img src="../pics/plazi.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/ch.svg" alt="" class="flag">
-                                <span class="country-name">Switzerland</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Catalogue of Life</td>
-                            <td class="org-logo"><img src="../pics/Col.jpg" alt="" class="flag"></td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">Swedish Biodiversity Data Infrastructure</td>
-                            <td class="org-logo"><img src="../pics/sbdi.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/se.svg" alt="" class="flag">
-                                <span class="country-name">Sweden</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="org-name">KU Leuven</td>
-                            <td class="org-logo"><img src="../pics/ku_leuven.png" alt="" class="institution"></td>
-                            <td class="org-flag">
-                                <img src="../pics/be.svg" alt="" class="flag">
-                                <span class="country-name">Belgium</span>
-                            </td>
-                        </tr>						
-                    </tbody>
-                </table>     
-            </details>      
-        </div>
-    </div>
+.vl{
+  border-left: 2px solid var(--dark);
+  height:40%;
+}
 
-    </section>
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 5rem;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
 
-	
-	<div class="spacer"></div>
+.menu ul li {
+  display: inline-flex;
+  height: 5rem;
+  align-items: center;
+  margin: 0;
+  padding: 0 1rem;
+}
 
-	<div class="funders">
-		<p style="font-weight:bolder; color: white; padding-left:0.5rem;padding-top:0.5rem;">Funded by:</p>
-		<div class="funders-container">
-			<img src="../pics/funders/ANRlogo_2022.jpg" alt="" class="funder-logo">
-			<img src="../pics/funders/BelSPO.jfif" alt="" class="funder-logo">
-			<img src="../pics/funders/DFG.jpeg" alt="" class="funder-logo">
-			<img src="../pics/funders/fct_black.png" alt="" class="funder-logo">
-			<img src="../pics/funders/gsri.svg" alt="" class="funder-logo">
-			<img src="../pics/funders/INEB_new.jpg" alt="" class="funder-logo">			
-			<img src="../pics/funders/netherlands_organisation_for_scientific_research.png" alt="" class="funder-logo">
-			<img src="../pics/funders/norwegian_government.png" alt="" class="funder-logo">
-			<img src="../pics/funders/NWO logo - RGB_wit_rondom_0.jpg" alt="" class="funder-logo">
-			<img src="../pics/funders/research_council_of_norway.png" alt="" class="funder-logo">
-			<img src="../pics/funders/swiss_national_science_foundation.png" alt="" class="funder-logo">
-			<img src="../pics/funders/UEFISCDI.jpg" alt="" class="funder-logo">
-		</div>
-	</div>
+.menu {
+  font-weight: bold;
+  color: var(--dark);
+  transition:0.3s;
+}
 
-	<div class="spacer"></div>
-	
-   <script src="path/to/script.js"></script>
-</body>
+.menu ul li div a{
+  text-decoration: none;
+  color: var(--dark);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  transition: color 0.3s, border-bottom 0.3s;	  
+}
 
-<footer>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="../style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script type="text/javascript" src="../scripts.js"></script>
-		<title></title>
-	</head>
-	
-	<body>
-	<div class="footer">
-		<div style="width: 100%; height: 20rem; background:var(--dark); border-top-left-radius: 1rem; border-top-right-radius: 1rem;">
-			<div style="display:flex;">
-				<a href="https://www.biodiversa.eu/" target="_blank"><img style="height:5rem;padding:2rem;" src="../pics/biodiversa.jpg" alt=""></a>
-				<div style="display:flex;">
-					<img style="height:5rem;padding:2rem 0 2rem 2rem;" src="../pics/ec.jpg" alt="">
-					<div><p style="color:white; font-weight:bold; padding-top: 2rem;padding-left:1rem;">Co-funded by <br> the European Union</p></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</body>
-</footer>
+.menu ul li div a.menu-active{
+  color: var(--active);
+  border-bottom: 2px solid var(--active);
+}
 
-</html>
+
+.menu ul li div a:hover{
+  color: var(--active);
+  border-bottom: 2px solid var(--active);
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+div.content{
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.item{
+  background-color: var(--field);
+  padding:2rem;
+}
+
+h1.item{
+  margin: 1rem 0 0 0;
+  padding: 1rem 0 2rem 2rem;
+  color: var(--dark);
+  background: var(--field-header);
+}
+
+.item-link{
+  display:block;
+  margin-top:2rem;
+  color: var(--active);
+  font-weight: bold;
+  text-decoration: none;
+  transition:0.3s;
+}
+
+.item-link:hover{
+  text-decoration: underline;
+}
+
+.arrow-right{
+  border: solid var(--active);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+
+.palette{
+display: flex;
+flex-wrap: wrap;
+margin:5rem;
+}
+
+.view-all-container{
+width: 100%;
+background-color: var(--dark);
+height: 6rem;
+margin-top: 5rem;
+}
+
+.view-all{
+background-color: var(--dark);
+color: white;
+border: 2px solid white;
+font-weight: bold;
+padding:1rem;
+border-radius: 0.5rem;
+min-width:fit-content;
+display: flex;
+float: right;
+margin-right: 2rem;
+margin-top: 2rem; 
+text-decoration: none;
+}
+
+.view-all:hover{
+color:var(--dark);
+background-color: var(--active);
+}
+
+.news-header{
+color: white;
+position: relative;
+}
+
+.news-header p{
+display: flex;
+float: left;
+margin-left: 2rem;
+margin-top: 2rem;
+font-weight: bold;
+font-size: xx-large;
+}
+
+.slideshow-container {
+box-sizing: border-box;
+background-color: var(--dark);
+position:relative;
+width: 100%;
+min-height:fit-content;
+margin: 0 auto 5rem auto;
+overflow: hidden;
+display: inline-flex;
+justify-content: space-around;
+align-items: center;
+padding:2rem;
+}
+
+.slide {
+display: none;
+background-color: white;
+border:1px solid white;
+box-shadow: 2px 2px 5px white;
+width: 30%;
+height: fit-content;
+}
+
+.slide-picture{
+width:100%;
+position: relative;
+margin-bottom:0.1rem;
+}
+
+.slide-picture-img{
+width: 100%
+}
+
+.news-date{
+position:absolute;
+background-color: white;
+color: var(--dark);
+border-radius: 1rem;
+text-align: center;
+display:flex;
+width: fit-content;
+padding: 0.5rem;
+margin-right: 1rem;
+margin-top: 1rem;
+top:0;
+right:0;
+font-weight:900;
+display: block;
+}
+
+.news-date p{
+text-align: center;
+padding: 0.1rem;
+margin: 0;
+
+}
+
+.day{
+font-size: x-large;
+border-top:1px solid var(--active);
+border-bottom: 1px solid var(--active);
+}
+
+.slide-header{
+color: var(--dark);
+margin-left:1.5rem;
+font-weight: bold;
+font-size: large;
+margin-top:0;
+margin-bottom:0;
+position: relative;
+text-align: left;
+}
+
+.slide-text{
+position: relative;
+padding:  0.5rem 1.5rem 0 1.5rem;
+overflow-y: hidden;
+}
+
+.slide .item-link{
+margin-left: 0;
+margin-bottom:1.5rem;
+margin-top:0.5rem;
+position: relative;
+}
+
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: var(--dark);
+background-color: var(--active);
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;  
+}
+
+.prev{
+left:0;
+border-radius: 0 3px 3px 0;
+}
+
+.next{
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.social-media{
+width: 100%;
+margin-top:5rem;
+display: inline-flex;
+align-items: center;  
+justify-content: space-around;
+}
+
+.smbutton{
+margin-right:2rem;
+}
+
+.smbutton:hover .smimage{
+height:6rem;
+}
+
+.smimage{
+height: 5rem;
+}
+
+
+/*---------------NEWS----------------*/
+
+.row{
+margin-top:5rem;
+margin-left: 20rem;
+margin-right: 20rem;
+display: flex;
+}
+
+.leftcolumn h1{
+font-size: x-large;
+
+}
+
+.leftcolumn div.item{
+margin-bottom:3rem;
+}
+
+.leftcolumn{
+box-sizing: border-box;
+background-color: var(--field);
+float:left;
+width: 75%;
+padding:2rem;
+margin-right: 2rem;
+}
+
+.rightcolumn{
+box-sizing: border-box;
+background-color: var(--field);
+float:right;
+width: 22%;
+padding:2rem;
+}
+
+ul.news{
+list-style-type: none;
+}
+
+li.news{
+margin-bottom: 1rem;
+}
+
+a.news{
+text-decoration: none;
+color: var(--active);
+font-weight:400;
+font-size: large;
+text-align: left;
+}
+
+a.news:hover{
+text-decoration: underline;
+}
+
+/* -------------------TEAM----------------------*/
+.consortium {
+  padding: 10px;
+}
+
+.consortium-members {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--28); /* Konsortien farblich differenzieren */
+  padding: 2rem 20px; 
+  margin: 2rem auto; 
+  max-width: 1200px; /* Set a maximum width for the boxes */
+  border-radius: 8px; /* Optional: To soften corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
+  width: calc(100% - 5px); /* Breite anpassen mit Abstand zum Seitenrand */
+  box-sizing: border-box; /* Berücksichtige Padding und Border in der Breite */
+}
+
+.cons-consortium-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.country-flag {
+  width: 30px; /* oder die gewünschte Größe */
+  height: auto; /* um das Seitenverhältnis zu erhalten */
+  margin-right: 8px; 
+}
+
+.team-members {
+  display: flex; /* Aktiviere Flexbox */
+  justify-content: center; /* Verteilt den Platz gleichmäßig */
+  align-items: center; /* Zentriert die Elemente vertikal */
+  flex-wrap: wrap; /* Erlaubt Umbrüche bei kleineren Bildschirmen */
+  margin-top: 1rem; /* Optional: Abstand über den Mitgliedern */
+}
+
+.team-member {
+  display: flex; /* Aktiviert Flexbox für jedes Mitglied */
+  flex-direction: column; /* Anordnung: Bild oben, Name unten */
+  align-items: center; /* Zentriert die Inhalte horizontal */
+  text-align: center; /* Text zentrieren */
+  margin: 1rem; /* Abstand zwischen den Mitgliedern */
+  width: 150px; /* Optionale Breite für jedes Mitglied */
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+.team-member-name, .team-member-position {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--dark); 
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .team-members {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+/* -------------------WORK PACKAGES----------------------*/
+
+/* Zentrale Bildbox */
+.photo-box {
+width: 90%;
+position: relative;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.photo-credit {
+position: absolute;
+right: 0.25rem;
+bottom: 0.5rem;
+}
+
+.photo-credit p {
+background: var(--dark);
+opacity: 0.5;
+color: var(--field);
+padding: 0.5rem;
+border-radius: 0.5rem;
+}
+
+/* Abstandhalter */
+.spacer {
+height: 10rem;
+background-color: white;
+}
+
+/* Hauptinhalt */
+div.content-aboutus {
+padding-left: 20rem;
+padding-right: 20rem;
+}
+
+.item-aboutus {
+background-color: var(--field);
+padding: 2rem;
+border-radius: 0.5rem;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1.item-aboutus {
+margin: 2rem 0 0 0;
+padding: 1rem 0 2rem 2rem;
+color: var(--dark);
+background: var(--field-header);
+text-align: left;
+}
+
+details {
+margin-top: 2rem;
+}
+
+summary {
+font-weight: bold;
+color: var(--active);
+cursor: pointer;
+list-style-image: none;
+}
+
+/* Work Packages */
+.workpackage-box {
+max-width: 1500px;
+margin: 2rem auto;
+padding: 2rem;
+background-color: var(--field);
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wp h2 a {
+color: black;
+text-decoration: none;
+}
+
+.wp h2 a:hover {
+color: var(--active);
+}
+
+.wp-description {
+text-align: center;
+font-size: 1rem;
+}
+
+.wp-description strong {
+font-weight: bold;
+color: var(--dark);
+}
+
+.wp-description img {
+max-height: 50px;
+margin-left: 1rem;
+vertical-align: middle;
+}
+
+/* Tabelle Teilnehmer - Layout */
+table.participants {
+width: 100%;
+border-collapse: collapse;
+table-layout: auto;
+}
+
+td.org-name {
+text-align: left;
+font-weight: bold;
+padding: 1rem;
+color: var(--dark);
+}
+
+td.org-logo {
+text-align: center;
+}
+
+td.org-flag {
+text-align: center;
+padding-right: 1rem;
+}
+
+.flag-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+td.org-logo img,
+.flag {
+height: 60px;
+display: block;
+}
+
+.flag-container p {
+  margin: 0;
+  font-size: 0.9rem; /* Schriftgröße kann angepasst werden */
+  color: var(--dark); /* Optional, wenn Farbe angepasst werden soll */
+  text-align: center;
+}
+
+/* Funders */
+.funders {
+background: var(--dl-grad);
+margin: 20rem;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.funders-container {
+display: flex;
+flex-wrap: wrap;
+padding: 2rem;
+justify-content: space-around;
+}
+
+.funder-logo {
+height: 5rem;
+padding: 1rem;
+}
+
+/* -------------------RESOURCE----------------------*/
+/* Resource-Box */
+.resource-box {
+max-width: 2000px;
+margin: 2rem auto; /* Zentrieren und Abstand nach oben/unten */
+padding: 2rem;
+background-color: var(--28); /* Box-Farbe */
+border-radius: 8px; /* Abrundung der Ecken */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+}
+
+/* Wenn du den Link hervorheben möchtest */
+.resource-box a {
+  color: var(--27); /* Farbe für Links */
+  text-decoration: none; /* Unterstreichung entfernen */
+}
+
+.resource-box a:hover {
+  color: var(--27) 100%; /* Hover-Farbe */
+  text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+/* -------------------CONTACT----------------------*/
+/* Kontakt-Box */
+.contact-box {
+  max-width: 2000px;
+  margin: 2rem auto; /* Zentrieren und Abstand nach oben/unten */
+  padding: 2rem;
+  background-color: var(--28); /* Box-Farbe */
+  border-radius: 8px; /* Abrundung der Ecken */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+}
+
+/* Kontakt-Text */
+.contact a {
+  color: black; /* Normale Schriftfarbe */
+  text-decoration: none; /* Unterstreichung entfernen */
+}
+
+.contact a:hover {
+  color: var(--active); /* Hover-Farbe */
+  text-decoration: none; /* Unterstreichung entfernen */
+}
+
+.contact {
+  text-align: center; /* Zentriere den Text */
+  font-size: 1rem; /* Textgröße */
+}
+
+/* Mail hervorheben */
+.contact strong {
+  font-weight: bold;
+  color: var(--dark); /* Hebt das "Mail" hervor */
+}
+
+/* -------------------Mobile-Version----------------------*/
+
+/* Hamburger-Button Styling */
+.menu-toggle {
+display: none; /* Nur für Mobile sichtbar */
+background-color: transparent;
+border: none;
+font-size: 2rem;
+color: var(--dark);
+cursor: pointer;
+}
+
+/* Für Mobilgeräte */
+@media only screen and (max-width: 1800px) {
+
+div.content, div.content-aboutus {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.funders{      
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+
+.menu ul li div a{
+  text-decoration: none;
+  color: var(--dark);
+  font-size: smaller;
+}
+
+.menu ul {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.menu ul li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+.day, .month, .year{
+  font-size: smaller;
+}
+
+div.content, div.content-aboutus {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.institution{
+  height:3rem;
+}
+
+.funders{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+}
+
+
+/* Mobile-Version: Hamburger-Menü einblenden, Normales Menü ausblenden */
+@media (max-width: 768px) {
+  .menu {
+      display: none; /* Normales Menü ausblenden */
+  }
+
+  .hamburger {
+      display: flex; /* Hamburger Icon sichtbar */
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+  }
+
+  .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--dark);
+  }
+
+  .menu.open {
+      display: flex; /* Menü wird angezeigt, wenn auf Hamburger-Icon geklickt */
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      width: 200px;
+      background-color: var(--28);
+  }
+
+  .menu ul {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .menu ul li {
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+  }
+}
