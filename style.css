@@ -648,6 +648,16 @@ height: 60px;
 display: block;
 }
 
+.org-name a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.org-name a:hoover {
+  color:var(--active);
+  text-decoration: underline
+}
+
 .country-name {
   margin: 0;
   font-size: 0.9rem; /* Schriftgröße kann angepasst werden */
