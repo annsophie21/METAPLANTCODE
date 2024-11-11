@@ -596,7 +596,7 @@ font-size: 1rem;
 
 .wp-description strong {
 font-weight: bold;
-color: var(--dark);
+color: var(--1);
 }
 
 .wp-description img {
@@ -606,11 +606,11 @@ vertical-align: middle;
 }
 
 .lead-beneficiary a {
-  color: var(--dark);
+  color: var(--1);
   text-decoration: none;  
 }
 
-.lead-beneficiary a:hoover {
+.lead-beneficiary a:hover {
   color: var(--active);
   text-decoration: underline;
 }
@@ -659,11 +659,11 @@ display: block;
 }
 
 .org-name a {
-  color: var(--dark);
+  color: var(--1);
   text-decoration: none;
 }
 
-.org-name a:hoover {
+.org-name a:hover {
   color: var(--active);
   text-decoration: underline;
 }
