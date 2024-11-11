@@ -654,8 +654,8 @@ display: block;
 }
 
 .org-name a:hoover {
-  color:var(--active);
-  text-decoration: underline
+  color: var(--active);
+  text-decoration: underline;
 }
 
 .country-name {
