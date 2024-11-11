@@ -605,6 +605,16 @@ margin-left: 1rem;
 vertical-align: middle;
 }
 
+.lead-beneficiary a {
+  color: var(--dark);
+  text-decoration: none;  
+}
+
+.lead-beneficiary a:hoover {
+  color: var(--active);
+  text-decoration: underline;
+}
+
 /* Tabelle Teilnehmer - Layout */
 table.participants {
 width: 100%;
