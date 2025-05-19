@@ -49,809 +49,100 @@
   font-style: italic;
 }
 
-
-*{
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Nunito", sans-serif;
-  text-align: justify;
-/*border: 1px solid red; */
 }
 
-body{
-  margin:0;
-  padding: 0;
-  line-height: 1.6;	  
-}
-
-
-.header-image{
-width:100%; 
-height:10rem; 
-background:var(--dark); 
-display: inline-flex; align-items: center;
-}
-
-.header-text{
-width: 100%;  
-background: var(--dark);
-color: white;
-font-size: x-large;
-margin-top: -1rem;
-padding-top: 1rem;
-padding-bottom: 1rem;
-}
-
-.header-text p{
-text-align: center;
-text-justify: auto;
-clear: both;
-}
-
-.hamburger {
-display: none; /* Nur für mobile Geräte */
-}
-
-.menu{
-  width:100%;
-  height: 5rem;
-  position: sticky;
-  background-color: white;
-  top:0;
-  z-index: 1;
-  box-shadow: 0 0 15px 1px var(--2); 
-  margin-bottom:5em; 
-}
-
-.menu-item{
-  font-size: large;
-  text-align: center;
-}
-
-.vl{
-  border-left: 2px solid var(--dark);
-  height:40%;
-}
-
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: 5rem;
-  display: inline-flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-}
-
-.menu ul li {
-  display: inline-flex;
-  height: 5rem;
-  align-items: center;
-  margin: 0;
-  padding: 0 1rem;
-}
-
-.menu {
-  font-weight: bold;
-  color: var(--dark);
-  transition:0.3s;
-}
-
-.menu ul li div a{
-  text-decoration: none;
-  color: var(--dark);
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  transition: color 0.3s, border-bottom 0.3s;	  
-}
-
-.menu ul li div a.menu-active{
-  color: var(--active);
-  border-bottom: 2px solid var(--active);
-}
-
-
-.menu ul li div a:hover{
-  color: var(--active);
-  border-bottom: 2px solid var(--active);
-  transform: scaleX(1);
-  transform-origin: center;
-}
-
-div.content{
-  padding-left: 20rem;
-  padding-right: 20rem;
-}
-
-.item{
+body {
+  font-family: var(--font);
   background-color: var(--field);
-  padding:2rem;
-}
-
-h1.item{
-  margin: 1rem 0 0 0;
-  padding: 1rem 0 2rem 2rem;
   color: var(--dark);
-  background: var(--field-header);
+  line-height: 1.6;
 }
 
-.item-link{
-  display:block;
-  margin-top:2rem;
-  color: var(--active);
-  font-weight: bold;
+a {
   text-decoration: none;
-  transition:0.3s;
-}
-
-.item-link:hover{
-  text-decoration: underline;
-}
-
-.arrow-right{
-  border: solid var(--active);
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-
-.palette{
-display: flex;
-flex-wrap: wrap;
-margin:5rem;
-}
-
-.view-all-container{
-width: 100%;
-background-color: var(--dark);
-height: 6rem;
-margin-top: 5rem;
-}
-
-.view-all{
-background-color: var(--dark);
-color: white;
-border: 2px solid white;
-font-weight: bold;
-padding:1rem;
-border-radius: 0.5rem;
-min-width:fit-content;
-display: flex;
-float: right;
-margin-right: 2rem;
-margin-top: 2rem; 
-text-decoration: none;
-}
-
-.view-all:hover{
-color:var(--dark);
-background-color: var(--active);
-}
-
-.news-header{
-color: white;
-position: relative;
-}
-
-.news-header p{
-display: flex;
-float: left;
-margin-left: 2rem;
-margin-top: 2rem;
-font-weight: bold;
-font-size: xx-large;
-}
-
-.slideshow-container {
-box-sizing: border-box;
-background-color: var(--dark);
-position:relative;
-width: 100%;
-min-height:fit-content;
-margin: 0 auto 5rem auto;
-overflow: hidden;
-display: inline-flex;
-justify-content: space-around;
-align-items: center;
-padding:2rem;
-}
-
-.slide {
-display: none;
-background-color: white;
-border:1px solid white;
-box-shadow: 2px 2px 5px white;
-width: 30%;
-height: fit-content;
-}
-
-.slide-picture{
-width:100%;
-position: relative;
-margin-bottom:0.1rem;
-}
-
-.slide-picture-img{
-width: 100%
-}
-
-.news-date{
-position:absolute;
-background-color: white;
-color: var(--dark);
-border-radius: 1rem;
-text-align: center;
-display:flex;
-width: fit-content;
-padding: 0.5rem;
-margin-right: 1rem;
-margin-top: 1rem;
-top:0;
-right:0;
-font-weight:900;
-display: block;
-}
-
-.news-date p{
-text-align: center;
-padding: 0.1rem;
-margin: 0;
-
-}
-
-.day{
-font-size: x-large;
-border-top:1px solid var(--active);
-border-bottom: 1px solid var(--active);
-}
-
-.slide-header{
-color: var(--dark);
-margin-left:1.5rem;
-font-weight: bold;
-font-size: large;
-margin-top:0;
-margin-bottom:0;
-position: relative;
-text-align: left;
-}
-
-.slide-text{
-position: relative;
-padding:  0.5rem 1.5rem 0 1.5rem;
-overflow-y: hidden;
-}
-
-.slide .item-link{
-margin-left: 0;
-margin-bottom:1.5rem;
-margin-top:0.5rem;
-position: relative;
-}
-
-.prev, .next {
-cursor: pointer;
-position: absolute;
-top: 50%;
-width: auto;
-padding: 16px;
-margin-top: -22px;
-color: var(--dark);
-background-color: var(--active);
-font-weight: bold;
-font-size: 18px;
-transition: 0.6s ease;  
-}
-
-.prev{
-left:0;
-border-radius: 0 3px 3px 0;
-}
-
-.next{
-right: 0;
-border-radius: 3px 0 0 3px;
-}
-
-.social-media{
-width: 100%;
-margin-top:5rem;
-display: inline-flex;
-align-items: center;  
-justify-content: space-around;
-}
-
-.smbutton{
-margin-right:2rem;
-}
-
-.smbutton:hover .smimage{
-height:6rem;
-}
-
-.smimage{
-height: 5rem;
-}
-
-
-/*---------------NEWS----------------*/
-
-.row{
-margin-top:5rem;
-margin-left: 20rem;
-margin-right: 20rem;
-display: flex;
-}
-
-.leftcolumn h1{
-font-size: x-large;
-
-}
-
-.leftcolumn div.item{
-margin-bottom:3rem;
-}
-
-.leftcolumn{
-box-sizing: border-box;
-background-color: var(--field);
-float:left;
-width: 75%;
-padding:2rem;
-margin-right: 2rem;
-}
-
-.rightcolumn{
-box-sizing: border-box;
-background-color: var(--field);
-float:right;
-width: 22%;
-padding:2rem;
-}
-
-ul.news{
-list-style-type: none;
-}
-
-li.news{
-margin-bottom: 1rem;
-}
-
-a.news{
-text-decoration: none;
-color: var(--active);
-font-weight:400;
-font-size: large;
-text-align: left;
-}
-
-a.news:hover{
-text-decoration: underline;
-}
-
-/* -------------------TEAM----------------------*/
-.consortium {
-  padding: 10px;
-}
-
-.consortium-members {
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--28); /* Konsortien farblich differenzieren */
-  padding: 2rem 20px; 
-  margin: 2rem auto; 
-  max-width: 1200px; /* Set a maximum width for the boxes */
-  border-radius: 8px; /* Optional: To soften corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
-  width: calc(100% - 5px); /* Breite anpassen mit Abstand zum Seitenrand */
-  box-sizing: border-box; /* Berücksichtige Padding und Border in der Breite */
-}
-
-.cons-consortium-header {
-  font-size: 1.5rem;
-  font-weight: bold;
   color: var(--dark);
-  text-align: center;
-  margin-bottom: 1.5rem;
 }
 
-.country-flag {
-  width: 30px; /* oder die gewünschte Größe */
-  height: auto; /* um das Seitenverhältnis zu erhalten */
-  margin-right: 8px; 
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
 }
 
-.team-members {
-  display: flex; /* Aktiviere Flexbox */
-  justify-content: center; /* Verteilt den Platz gleichmäßig */
-  align-items: center; /* Zentriert die Elemente vertikal */
-  flex-wrap: wrap; /* Erlaubt Umbrüche bei kleineren Bildschirmen */
-  margin-top: 1rem; /* Optional: Abstand über den Mitgliedern */
+.main-header {
+  background: var(--dl-grad, linear-gradient(270deg,#0f3b60, #1ca4a6));
+  color: white;
+  padding: 1rem 0;
 }
 
-.team-member {
-  display: flex; /* Aktiviert Flexbox für jedes Mitglied */
-  flex-direction: column; /* Anordnung: Bild oben, Name unten */
-  align-items: center; /* Zentriert die Inhalte horizontal */
-  text-align: center; /* Text zentrieren */
-  margin: 1rem; /* Abstand zwischen den Mitgliedern */
-  width: 150px; /* Optionale Breite für jedes Mitglied */
-}
-
-.team-member img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border: none;
-  margin-bottom: 0.5rem;
-}
-
-.team-member-name, .team-member-position {
-  margin: 0;
-  font-size: 1rem;
-  color: var(--dark); 
-  font-weight: bold;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .team-members {
-      flex-direction: column;
-      align-items: center;
-  }
-}
-
-/* -------------------WORK PACKAGES----------------------*/
-
-/* Zentrale Bildbox */
-.photo-box {
-width: 90%;
-position: relative;
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
-.photo-credit {
-position: absolute;
-right: 0.25rem;
-bottom: 0.5rem;
-}
-
-.photo-credit p {
-background: var(--dark);
-opacity: 0.5;
-color: var(--field);
-padding: 0.5rem;
-border-radius: 0.5rem;
-}
-
-/* Abstandhalter */
-.spacer {
-height: 10rem;
-background-color: white;
-}
-
-/* Hauptinhalt */
-div.content-aboutus {
-padding-left: 20rem;
-padding-right: 20rem;
-}
-
-.item-aboutus {
-background-color: var(--field);
-padding: 2rem;
-border-radius: 0.5rem;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1.item-aboutus {
-margin: 2rem 0 0 0;
-padding: 1rem 0 2rem 2rem;
-color: var(--dark);
-background: var(--field-header);
-text-align: left;
-}
-
-details {
-margin-top: 2rem;
-}
-
-summary {
-font-weight: bold;
-color: var(--active);
-cursor: pointer;
-list-style-image: none;
-}
-
-/* Work Packages */
-.workpackage-box {
-max-width: 1500px;
-margin: 2rem auto;
-padding: 2rem;
-background-color: var(--field);
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.wp h2 a {
-color: black;
-text-decoration: none;
-}
-
-.wp h2 a:hover {
-color: var(--active);
-}
-
-.wp-description {
-text-align: center;
-font-size: 1rem;
-}
-
-.wp-description strong {
-font-weight: bold;
-color: var(--1);
-}
-
-.wp-description img {
-max-height: 50px;
-margin-left: 1rem;
-vertical-align: middle;
-}
-
-.lead-beneficiary a {
-  color: var(--1);
-  text-decoration: none;  
-}
-
-.lead-beneficiary a:hover {
-  color: var(--active);
-  text-decoration: underline;
-}
-
-/* Tabelle Teilnehmer - Layout */
-table.participants {
-width: 100%;
-border-collapse: separate;
-border-spacing: 0 1.5rem;
-table-layout: auto;
-}
-
-td.org-name,
-td.org-logo,
-td.org-flag {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-td.org-name {
-text-align: left;
-font-weight: bold;
-padding: 1rem;
-color: var(--dark);
-}
-
-td.org-logo {
-text-align: center;
-}
-
-td.org-flag {
-text-align: center;
-padding-right: 1rem;
-}
-
-.flag-container {
+.nav-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-td.org-logo img,
-.flag {
-height: 60px;
-display: block;
+.logo {
+  height: 60px;
 }
 
-.org-name a {
-  color: var(--1);
-  text-decoration: none;
+.nav {
+  display: flex;
+  gap: 1.5rem;
 }
 
-.org-name a:hover {
+.nav-link {
+  font-weight: 600;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
   color: var(--active);
-  text-decoration: underline;
 }
 
-.country-name {
-  margin: 0;
-  font-size: 0.9rem; /* Schriftgröße kann angepasst werden */
-  color: var(--dark); /* Optional, wenn Farbe angepasst werden soll */
+.hero {
+  background-color: var(--field);
+  padding: 5rem 1rem;
   text-align: center;
 }
 
-/* Funders */
-.funders {
-background: var(--dl-grad);
-margin: 20rem;
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.funders-container {
-display: flex;
-flex-wrap: wrap;
-padding: 2rem;
-justify-content: space-around;
-}
-
-.funder-logo {
-height: 5rem;
-padding: 1rem;
-}
-
-/* -------------------RESOURCE----------------------*/
-/* Resource-Box */
-.resource-box {
-max-width: 2000px;
-margin: 2rem auto; /* Zentrieren und Abstand nach oben/unten */
-padding: 2rem;
-background-color: var(--28); /* Box-Farbe */
-border-radius: 8px; /* Abrundung der Ecken */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
-}
-
-/* Wenn du den Link hervorheben möchtest */
-.resource-box a {
-  color: var(--27); /* Farbe für Links */
-  text-decoration: none; /* Unterstreichung entfernen */
-}
-
-.resource-box a:hover {
-  color: var(--27) 100%; /* Hover-Farbe */
-  text-decoration: underline; /* Unterstreichung beim Hover */
-}
-
-/* -------------------CONTACT----------------------*/
-/* Kontakt-Box */
-.contact-box {
-  max-width: 2000px;
-  margin: 2rem auto; /* Zentrieren und Abstand nach oben/unten */
-  padding: 2rem;
-  background-color: var(--28); /* Box-Farbe */
-  border-radius: 8px; /* Abrundung der Ecken */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
-}
-
-/* Kontakt-Text */
-.contact a {
-  color: black; /* Normale Schriftfarbe */
-  text-decoration: none; /* Unterstreichung entfernen */
-}
-
-.contact a:hover {
-  color: var(--active); /* Hover-Farbe */
-  text-decoration: none; /* Unterstreichung entfernen */
-}
-
-.contact {
-  text-align: center; /* Zentriere den Text */
-  font-size: 1rem; /* Textgröße */
-}
-
-/* Mail hervorheben */
-.contact strong {
-  font-weight: bold;
-  color: var(--dark); /* Hebt das "Mail" hervor */
-}
-
-/* -------------------Mobile-Version----------------------*/
-
-/* Hamburger-Button Styling */
-.menu-toggle {
-display: none; /* Nur für Mobile sichtbar */
-background-color: transparent;
-border: none;
-font-size: 2rem;
-color: var(--dark);
-cursor: pointer;
-}
-
-/* Für Mobilgeräte */
-@media only screen and (max-width: 1800px) {
-
-div.content, div.content-aboutus {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.funders{      
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-}
-
-@media only screen and (max-width: 1200px) {
-
-.menu ul li div a{
-  text-decoration: none;
+.hero h1 {
+  font-size: 2.5rem;
   color: var(--dark);
-  font-size: smaller;
 }
 
-.menu ul {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.hero p {
+  font-size: 1.2rem;
+  color: var(--light);
+  margin-top: 1rem;
 }
 
-.menu ul li {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.main-footer {
+  background-color: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
 }
 
-
-.day, .month, .year{
-  font-size: smaller;
-}
-
-div.content, div.content-aboutus {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.institution{
-  height:3rem;
-}
-
-.funders{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-}
-
-
-/* Mobile-Version: Hamburger-Menü einblenden, Normales Menü ausblenden */
 @media (max-width: 768px) {
-  .menu {
-      display: none; /* Normales Menü ausblenden */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
   }
 
-  .hamburger {
-      display: flex; /* Hamburger Icon sichtbar */
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
+  .hero h1 {
+    font-size: 2rem;
   }
 
-  .hamburger span {
-      width: 25px;
-      height: 3px;
-      background-color: var(--dark);
-  }
-
-  .menu.open {
-      display: flex; /* Menü wird angezeigt, wenn auf Hamburger-Icon geklickt */
-      flex-direction: column;
-      position: absolute;
-      top: 50px;
-      right: 0;
-      width: 200px;
-      background-color: var(--28);
-  }
-
-  .menu ul {
-      flex-direction: column;
-      width: 100%;
-  }
-
-  .menu ul li {
-      width: 100%;
-      text-align: center;
-      padding: 1rem;
+  .logo {
+    height: 48px;
   }
 }
