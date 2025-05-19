@@ -1,138 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="pics/M-logo.png">
-    <title>METAPLANTCODE - HOME</title>
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>METAPLANTCODE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="pics/M-logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header> 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" href="pics/M-logo.png">
-        <title></title>
-        <style></style>
-        <div class="header-image">
-            <img style="height: 10rem; margin:auto;" src="pics/metaplantlogo.png" alt="">
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <img src="pics/metaplantlogo.png" alt="METAPLANTCODE Logo" class="logo" />
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="funding.html" class="nav-link">Funding</a>
+                <a href="research.html" class="nav-link">Research</a>
+            </nav>
         </div>
-        <div class="header-text">
-		<p>Harmonizing plant metabarcoding pipelines in Europe 
-                    <br> to support monitoring activities in the field of plants 
-                    <br> and their functional organismic networks
-                </p>
-	    </div>
     </header>
 
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-      
-    <div class="menu">
-        <ul>
-            <li><div class="menu-item"><a class="menu-active" href=>HOME</a></div></li>
-            <li><div class="vl"></div></li>
-            <li><div class="menu-item"><a href="team/index.html">TEAM</a></div></li>
-            <li><div class="vl"></div></li>
-            <li><div class="menu-item"><a href="protocol/index.html">WORK PACKAGES</a></div></li>
-            <li><div class="vl"></div></li>
-            <li><div class="menu-item"><a href="resources/index.html">RESOURCE</a></div></li>
-            <li><div class="vl"></div></li>
-            <li><div class="menu-item"><a href="contact/index.html">CONTACT</a></div></li>
-        </ul>
-    </div>
-	
-    <div class="content">
-        <h1 class="item">Welcome!</h1>
-        <div class="item">
-            <p>"METAPLANTCODE presents a unique collaborative and transnational approach to test, optimize, harmonize and recommend best practices for plant metabarcoding for samples with varying degrees of species complexity, contamination and DNA degradation using case studies across Europe. The innovative combination of accelerated molecular plant monitoring and the integration of diverse biodiversity data with optimized and automated pipelines will close knowledge gaps on the state of biodiversity, interdependencies and dynamics. The new techniques are suitable for large-scale, long-term, high-throughput monitoring and enable biodiversity surveys on a scale and with a precision that was previously unattainable."</p>
-            <a class="item-link" href="protocol/index.html"><i class="arrow-right"></i>&nbsp; Details</a>
+    <section class="hero">
+        <div class="container">
+            <h1>Harmonizing plant metabarcoding pipelines in Europe</h1>
+            <p>Supporting plant monitoring through shared research and open collaboration.</p>
         </div>
-        <div class="social-media">
-            <a class="smbutton" href="https://x.com/MetaPlantCode" target="_blank"><img src="pics/x-logo.svg" alt="" class="smimage"></a>
-            <a class="smbutton" href="https://www.facebook.com/profile.php?id=61561470754476" target="_blank"><img src="pics/fb-logo.svg" alt="" class="smimage"></a>
-            <a class="smbutton" href="https://www.youtube.com/@MetaPlantCode" target="_blank"><img src="pics/yt-logo.svg" alt="" class="smimage"></a>  
-            <a class="smbutton" href="https://www.linkedin.com/company/metaplantcode" target="_blank"><img src="pics/li-logo.svg" alt="" class="smimage"></a>
-        </div>
-        <div class="view-all-container">
-            <div class="news-header"><p>News and Events</p></div>	
-        </div>
-        <div class="slideshow-container">
+    </section>
 
-            <div class="slide" style="display: block;">
-                <div>
-                    <div class="slide-picture">
-                        <img src="pics/hurra.png" alt="" class="slide-picture-img">
-                        <div class="news-date"><p class="month">APR</p><p class="day">01</p><p class="year">2024</p></div>
-                    </div>
-                    <div class="slide-header">Official Start of METAPLANTCODE</div>
-                    <div class="slide-text"><!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptas. Enim voluptas non fuga necessitatibus quidem unde impedit, eum, excepturi ad reprehenderit consequatur sed sint cum! Quibusdam, quas iure? Vitae?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, fuga obcaecati vero, labore sapiente enim praesentium cum, a expedita neque veniam iste perspiciatis perferendis modi adipisci. Atque maxime fugiat nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores natus voluptatibus id, architecto magni earum unde odit dignissimos accusamus tempora itaque dolorem fuga ea placeat provident commodi. Officia, nobis deserunt. --> <br></div>
-                </div>
-            </div>
-            
-            <div class="slide" style="display: none;">
-                <div>
-                    <div class="slide-picture">
-                        <img src="pics/group_picture.jpg" alt="" class="slide-picture-img">
-                        <div class="news-date"><p class="month">MAY</p><p class="day">13/14</p><p class="year">2024</p></div>
-                    </div>
-                    <div class="slide-header">First METAPLANTCODE plenary meeting</div>
-                    <div class="slide-text"> <br> </div>
-                </div>
-            </div>
-        
-            <div class="slide" style="display: none;">
-                <div>
-                    <div class="slide-picture">
-                        <img src="pics/news_pic_dummy.svg" alt="" class="slide-picture-img">
-                        <div class="news-date"><p class="month">SEP</p><p class="day">01</p><p class="year">2024</p></div>
-                    </div>
-                    <div class="slide-header">Biodiversa+ virtual data management workshop</div>
-                    <div class="slide-text"><!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptas. Enim voluptas non fuga necessitatibus quidem unde impedit, eum, excepturi ad reprehenderit consequatur sed sint cum! Quibusdam, quas iure? Vitae?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, fuga obcaecati vero, labore sapiente enim praesentium cum, a expedita neque veniam iste perspiciatis perferendis modi adipisci. Atque maxime fugiat nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores natus voluptatibus id, architecto magni earum unde odit dignissimos accusamus tempora itaque dolorem fuga ea placeat provident commodi. Officia, nobis deserunt. --> <br> <a target="_blank" href="https://www.biodiversa.eu/2022/09/06/biodiversity-monitoring-data-interoperability-and-harmonisation/" class="item-link"><i class="arrow-right"></i> &nbsp; Link</a></div>
-                </div>
-            </div>
-        
-                
-            
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-              <a class="next" onclick="plusSlides(1)">❯</a>
-        </div>
-    </div>   
-    <footer>
-	
+    <footer class="main-footer">
+        <p>&copy; 2025 METAPLANTCODE – All rights reserved.</p>
+    </footer>
 
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type="text/javascript" src="/JS/scripts.js"></script>
-        <title></title>
-    
-    
-    
-    <div class="footer">
-        <div style="width: 100%; height: 20rem; background:var(--dark); border-top-left-radius: 1rem; border-top-right-radius: 1rem;">
-            <div style="display:flex;">
-                <a href="https://www.biodiversa.eu/" target="_blank"><img style="height:5rem;padding:2rem;" src="pics/biodiversa.jpg" alt=""></a>
-                <div style="display:flex;">
-                    <img style="height:5rem;padding:2rem 0 2rem 2rem;" src="pics/ec.jpg" alt="">
-                    <div><p style="color:white; font-weight:bold; padding-top: 2rem;padding-left:1rem;">Co-funded by <br> the European Union</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    </footer>   
-  <script src="scripts.js"></script>	
-</body>
 </body>
 </html>
-
