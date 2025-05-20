@@ -1,4 +1,4 @@
-/* Grundlegende Einstellungen */
+/*----------------------------------------- Grundlegende Einstellungen ---------------------------*/
 :root {
     --dark: #0f3b60;
     --light: #1ca4a6;
@@ -24,7 +24,7 @@
     line-height: 1.6;
   }
   
-  /* NAVIGATION */
+  /*---------------------------------------- NAVIGATION ----------------------------------*/
   .navbar {
     position: sticky;
     top: 0;
@@ -52,7 +52,7 @@
     color: var(--active);
   }
   
-  /* HERO */
+  /* ------------------------------------------------HERO---------------------------------------- */
   .hero img {
     width: 100%;
     height: auto;
@@ -86,7 +86,7 @@
     user-select: none;
   }
   
-  /* ABOUT SECTION */
+  /* ------------------------------------------------ABOUT SECTION-----------------------------------------------*/
   .about {
     background-color: var(--field);
     padding: 4rem 2rem;
@@ -131,9 +131,9 @@
     text-decoration: underline;
   }
   
-  /* NEWS SECTION */
+  /*--------------------------------------------------- NEWS SECTION ----------------------------------------------*/
   .news {
-    background-color: #C9E2F7;
+    background-color: #E5F1FB;
     color: white;
     padding: 4rem 2rem;
   }
@@ -167,12 +167,12 @@
     padding: 1rem;
   }
   
-  /* FOOTER */
+  /* -----------------------------------------------FOOTER -----------------------------------------------*/
   footer {
     font-size: 0.9rem;
   }
   
-  /* Top links */
+  /*---------- Top links----------- */
   .footer-top {
     background-color: var(--footer-top);
     display: flex;
@@ -193,7 +193,7 @@
     color: var(--active);
   }
   
-  /* EU + Biodiversa logos */
+  /*---------- EU + Biodiversa logos ---------*/
   .footer-middle {
     background-color: var(--footer-middle);
     display: flex;
@@ -207,7 +207,7 @@
     object-fit: contain;
   }
   
-  /* Social Media */
+  /*------------ Social Media -----------*/
   .footer-social {
     background-color: var(--footer-social);
     display: flex;
@@ -220,7 +220,7 @@
     height: 24px;
   }
   
-  /* Bottom Logo */
+  /* ----------Bottom Logo--------- */
   .footer-bottom {
     background-color: var(--dark);
     text-align: center;
@@ -231,7 +231,7 @@
     height: 40px;
   }
   
-  /* Responsive */
+  /* -----------------------------------------Responsive ----------------------------------------------*/
   @media (max-width: 768px) {
     .about-content {
       flex-direction: column;
