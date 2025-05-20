@@ -147,7 +147,7 @@ footer {
 
 /* Top links */
 .footer-top {
-  background-color: var(--field);
+  background-color: #686a68;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -168,7 +168,7 @@ footer {
 
 /* EU + Biodiversa logos */
 .footer-middle {
-  background-color: #ccc;
+  background-color: #5b5b5b;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -182,7 +182,7 @@ footer {
 
 /* Social Media */
 .footer-social {
-  background-color: var(--footer-bg);
+  background-color: #414141;
   display: flex;
   justify-content: center;
   gap: 2rem;
