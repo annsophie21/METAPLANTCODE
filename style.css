@@ -136,7 +136,7 @@
   
   /*--------------------------------------------------- NEWS SECTION ----------------------------------------------*/
   .news {
-    background-color: var(--active);
+    background-color: #E9FBFB;
     color: white;
     padding: 4rem 2rem;
   }
