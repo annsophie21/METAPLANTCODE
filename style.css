@@ -1,3 +1,4 @@
+
 /*----------------------------------------- Grundlegende Einstellungen ---------------------------*/
 :root {
     --dark: #0f3b60;
@@ -76,14 +77,16 @@
   .watermark {
     position: absolute;
     bottom: 8px;
-    right: 12px;
-    background-color: rgba(15, 59, 96, 0.6); /* dunkles blau, halbtransparent */
-    color: white;
-    font-size: 0.7rem;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
+    right: 8px;
+    font-size: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.5); /* Milchiger, heller Hintergrund */
+    color: var(--dark); /* dein METAPLANTCODE-Blau */
+    padding: 2px 6px;
+    border-radius: 3px;
     pointer-events: none;
     user-select: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
   }
   
   /* ------------------------------------------------ABOUT SECTION-----------------------------------------------*/
