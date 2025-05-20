@@ -6,6 +6,9 @@
   --field: #f6f6f6;
   --gray-light: #e0e0e0;
   --gray-dark: #444;
+  --footer-middle: #5b5b5b;
+  --footer-social: #414141;
+  --footer-top: #686a68;
   --footer-bg: #111;
 }
 
@@ -147,7 +150,7 @@ footer {
 
 /* Top links */
 .footer-top {
-  background-color: #686a68;
+  background-color: var(--footer-top);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -168,7 +171,7 @@ footer {
 
 /* EU + Biodiversa logos */
 .footer-middle {
-  background-color: #5b5b5b;
+  background-color: var(--footer-middle);
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -182,7 +185,7 @@ footer {
 
 /* Social Media */
 .footer-social {
-  background-color: #414141;
+  background-color: var(--footer-social);
   display: flex;
   justify-content: center;
   gap: 2rem;
