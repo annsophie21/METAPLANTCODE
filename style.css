@@ -1,224 +1,248 @@
 /* Grundlegende Einstellungen */
 :root {
-  --dark: #0f3b60;
-  --light: #1ca4a6;
-  --active: #98c01e;
-  --field: #f6f6f6;
-  --gray-light: #e0e0e0;
-  --gray-dark: #444;
-  --footer-middle: #5b5b5b;
-  --footer-social: #414141;
-  --footer-top: #686a68;
-  --footer-bg: #111;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Nunito', sans-serif;
-  background-color: white;
-  color: #111;
-  line-height: 1.6;
-}
-
-/* NAVIGATION */
-.navbar {
-  position: sticky;
-  top: 0;
-  background-color: var(--dark);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  z-index: 1000;
-}
-
-.logo img {
-  height: 40px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin-left: 2rem;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: var(--active);
-}
-
-/* HERO */
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-height: 500px;
-  object-fit: cover;
-}
-
-/* ABOUT SECTION */
-.about {
-  background-color: var(--field);
-  padding: 4rem 2rem;
-}
-
-.about-content {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-}
-
-.about-img {
-  flex: 1 1 200px;
-  max-width: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.about-text {
-  flex: 2 1 400px;
-}
-
-.about-text h2 {
-  color: var(--dark);
-  margin-bottom: 1rem;
-}
-
-.about-text p {
-  margin-bottom: 1rem;
-}
-
-.learn-more {
-  color: var(--light);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.learn-more:hover {
-  text-decoration: underline;
-}
-
-/* NEWS SECTION */
-.news {
-  background-color: #C9E2F7;
-  color: white;
-  padding: 4rem 2rem;
-}
-
-.news h2 {
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.news-item {
-  background-color: white;
-  color: #111;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.news-item img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
-.news-item p {
-  padding: 1rem;
-}
-
-/* FOOTER */
-footer {
-  font-size: 0.9rem;
-}
-
-/* Top links */
-.footer-top {
-  background-color: var(--footer-top);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  border-top: 1px solid #ccc;
-}
-
-.footer-top a {
-  color: var(--dark);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.footer-top a:hover {
-  color: var(--active);
-}
-
-/* EU + Biodiversa logos */
-.footer-middle {
-  background-color: var(--footer-middle);
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-}
-
-.footer-middle img {
-  height: 3rem;
-  object-fit: contain;
-}
-
-/* Social Media */
-.footer-social {
-  background-color: var(--footer-social);
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-}
-
-.footer-social img {
-  height: 24px;
-}
-
-/* Bottom Logo */
-.footer-bottom {
-  background-color: var(--dark);
-  text-align: center;
-  padding: 1rem;
-}
-
-.footer-bottom img {
-  height: 40px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    text-align: center;
+    --dark: #0f3b60;
+    --light: #1ca4a6;
+    --active: #98c01e;
+    --field: #f6f6f6;
+    --gray-light: #e0e0e0;
+    --gray-dark: #444;
+    --footer-middle: #5b5b5b;
+    --footer-social: #414141;
+    --footer-top: #686a68;
   }
-
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    background-color: white;
+    color: #111;
+    line-height: 1.6;
+  }
+  
+  /* NAVIGATION */
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
   .nav-links a {
-    margin-left: 1rem;
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--active);
+  }
+  
+  /* HERO */
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 500px;
+    object-fit: cover;
   }
 
-  .news-grid {
-    grid-template-columns: 1fr;
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
   }
-}
+  
+  .image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .watermark {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    background-color: rgba(15, 59, 96, 0.6); /* dunkles blau, halbtransparent */
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* ABOUT SECTION */
+  .about {
+    background-color: var(--field);
+    padding: 4rem 2rem;
+  }
+  
+  .about-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .about-img {
+    flex: 1 1 200px;
+    max-width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .about-text {
+    flex: 2 1 400px;
+  }
+  
+  .about-text h2 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+  
+  .about-text p {
+    margin-bottom: 1rem;
+  }
+  
+  .learn-more {
+    color: var(--light);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .learn-more:hover {
+    text-decoration: underline;
+  }
+  
+  /* NEWS SECTION */
+  .news {
+    background-color: #C9E2F7;
+    color: white;
+    padding: 4rem 2rem;
+  }
+  
+  .news h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .news-item {
+    background-color: white;
+    color: #111;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .news-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .news-item p {
+    padding: 1rem;
+  }
+  
+  /* FOOTER */
+  footer {
+    font-size: 0.9rem;
+  }
+  
+  /* Top links */
+  .footer-top {
+    background-color: var(--footer-top);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-top: 1px solid #ccc;
+  }
+  
+  .footer-top a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .footer-top a:hover {
+    color: var(--active);
+  }
+  
+  /* EU + Biodiversa logos */
+  .footer-middle {
+    background-color: var(--footer-middle);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .footer-middle img {
+    height: 3rem;
+    object-fit: contain;
+  }
+  
+  /* Social Media */
+  .footer-social {
+    background-color: var(--footer-social);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .footer-social img {
+    height: 24px;
+  }
+  
+  /* Bottom Logo */
+  .footer-bottom {
+    background-color: var(--dark);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .footer-bottom img {
+    height: 40px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-links a {
+      margin-left: 1rem;
+    }
+  
+    .news-grid {
+      grid-template-columns: 1fr;
+    }
+  }
