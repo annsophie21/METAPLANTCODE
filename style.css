@@ -109,7 +109,7 @@ body {
 
 /* NEWS SECTION */
 .news {
-  background-color: var(--light);
+  background-color: #C9E2F7;
   color: white;
   padding: 4rem 2rem;
 }
