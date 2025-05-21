@@ -150,6 +150,7 @@
   .news h3 {
     color: var(--dark);
     padding: 1rem;
+    margin-bottom: 0.3rem;
   }
   
   .news-grid {
