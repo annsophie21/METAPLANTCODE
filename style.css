@@ -136,8 +136,8 @@
   
   /*--------------------------------------------------- NEWS SECTION ----------------------------------------------*/
   .news {
-    background-color: #E9FBFB;
-    color: white;
+    background-color: #E5F1FB;
+    color: var(--dark);
     padding: 4rem 2rem;
   }
   
@@ -199,6 +199,7 @@
   /*---------- EU + Biodiversa logos ---------*/
   .footer-middle {
     background-color: var(--footer-middle);
+    color: white;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -220,7 +221,7 @@
   }
   
   .footer-social img {
-    height: 24px;
+    height: 30px;
   }
   
   /* ----------Bottom Logo--------- */
