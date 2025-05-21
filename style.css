@@ -242,7 +242,10 @@
   }
   
   .footer-social img {
-    height: 30px;
+    height: 2rem;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
   }
   
   /* ----------Bottom Logo--------- */
