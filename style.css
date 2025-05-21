@@ -150,7 +150,8 @@
   .news h3 {
     color: var(--dark);
     padding: 1rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
+    padding-bottom: 0;
   }
   
   .news-grid {
@@ -175,6 +176,7 @@
   
   .news-item p {
     margin-top: 0;
+    padding-top: 0;
     padding: 1rem;
   }
   
