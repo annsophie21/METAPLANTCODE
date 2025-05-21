@@ -115,7 +115,7 @@
     flex: 2 1 400px;
   }
   
-  .about-text h2 {
+  .about-text h1 {
     color: var(--dark);
     margin-bottom: 1rem;
   }
@@ -141,6 +141,11 @@
     padding: 4rem 2rem;
   }
   
+  .news h1 {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
   .news h2 {
     text-align: left;
     margin-bottom: 2rem;
