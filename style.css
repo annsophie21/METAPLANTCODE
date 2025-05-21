@@ -176,6 +176,17 @@
     padding: 1rem;
   }
   
+  .news-link  {
+    color: var(--light);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1rem;
+  }
+
+  .news-link:hover {
+    text-decoration: underline;
+  }
+  
   /* -----------------------------------------------FOOTER -----------------------------------------------*/
   footer {
     font-size: 0.9rem;
