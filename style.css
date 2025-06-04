@@ -365,6 +365,15 @@
   background-color: #0055aa;
 }
 
+.checkbox-label {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
   /* ---------------Thank You-------------*/
 .thankyou-page {
   background-color: var(--field);
