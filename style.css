@@ -259,6 +259,48 @@
     height: 40px;
   }
 
+/* -----------------------------------------Privacy----------------------------------------------*/
+.privacy-policy {
+  background-color: #f4f4f4;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 3rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+  color: #333;
+}
+
+.privacy-policy h1,
+.privacy-policy h2 {
+  color: #003366;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.privacy-policy h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.privacy-policy p,
+.privacy-policy ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.privacy-policy ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.privacy-policy ul li {
+  margin-bottom: 0.75rem;
+}
+
+
   /* -----------------------------------------Contact----------------------------------------------*/
 .contact-form {
   background-color: #f4f4f4;
@@ -313,7 +355,7 @@
   background-color: #0055aa;
 }
 
-  /* -----------------------------------------Thank You----------------------------------------------*/
+  /* ---------------Thank You-------------*/
 .thankyou-page {
   background-color: var(--field);
   padding: 5rem 2rem;
