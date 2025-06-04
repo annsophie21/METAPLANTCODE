@@ -300,6 +300,16 @@
   margin-bottom: 0.75rem;
 }
 
+.privacy-policy a {
+  color: #003366;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.privacy-policy a:hover {
+  color: var(--active);
+}
+
 
   /* -----------------------------------------Contact----------------------------------------------*/
 .contact-form {
