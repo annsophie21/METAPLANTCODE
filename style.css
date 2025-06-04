@@ -261,8 +261,12 @@
 
   /* -----------------------------------------Contact----------------------------------------------*/
 .contact {
-    background-color: #ebeaed;
-    padding: 4rem 2rem;
+  background-color: var(--field); /* Hellgrauer Hintergrund */
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .contact h1 {
@@ -311,8 +315,6 @@
 .contact-text strong {
   color: var(--dark);
 }
-
-
   
   /* -----------------------------------------Responsive----------------------------------------------*/
   @media (max-width: 768px) {
