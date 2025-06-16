@@ -282,7 +282,28 @@
   line-height: 1.6;
   margin-bottom: 2rem;
 }
+.funding-text h2 {
+  margin-bottom: 1rem;
+}
 
+.funding-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.funding-text li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.funding-text a {
+  font-weight: 600;
+  text-decoration: strong;
+}
+
+.funding-text a:hover {
+  text-decoration: underline;
+}
 /* -------- LOGO GRID SECTION -------- */
 .funding-logos {
   background-color: #f6f6f6;
@@ -303,39 +324,6 @@
 
 .funder-logo:hover {
   transform: scale(1.05);
-}
-
-/* -------- PROJECT INFO SECTION -------- */
-.funding-details {
-  background-color: #fff;
-  padding: 3rem 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  color: var(--dark);
-}
-
-.funding-details h2 {
-  margin-bottom: 1rem;
-}
-
-.funding-details ul {
-  list-style: none;
-  padding: 0;
-}
-
-.funding-details li {
-  margin-bottom: 0.8rem;
-  font-size: 1rem;
-}
-
-.funding-details a {
-  color: var(--light);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.funding-details a:hover {
-  text-decoration: underline;
 }
 
 /* ================================= RESOURCES SECTION ================================== */
