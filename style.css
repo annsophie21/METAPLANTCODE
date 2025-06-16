@@ -261,45 +261,62 @@
 
 /* ================================= Funding ================================== */
 
-.funding-intro {
+.funding {
   background-color: #ebeaed;
   padding: 4rem 2rem;
-  color: #111;
-  text-align: left;
+}
+
+.funding-content {
   max-width: 1200px;
   margin: auto;
+  color: var(--dark);
 }
 
-.funding-logos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #f6f6f6;
-  padding: 3rem 2rem;
-}
-
-.funder {
-  flex: 1 1 300px;
-  text-align: center;
-}
-
-.funder img {
-  max-height: 80px;
+.funding-text h1 {
+  color: var(--dark);
   margin-bottom: 1rem;
 }
 
-.funder p {
-  font-size: 0.95rem;
-  color: #111;
+.funding-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
+/* -------- LOGO GRID SECTION -------- */
+.funding-logos {
+  background-color: #f6f6f6;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.funder-logo {
+  height: 60px;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(100%); /* Einheitlicher Look */
+  transition: transform 0.2s ease;
+}
+
+.funder-logo:hover {
+  transform: scale(1.05);
+}
+
+/* -------- PROJECT INFO SECTION -------- */
 .funding-details {
   background-color: #fff;
-  padding: 2rem;
+  padding: 3rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
+  color: var(--dark);
+}
+
+.funding-details h2 {
+  margin-bottom: 1rem;
 }
 
 .funding-details ul {
@@ -308,7 +325,18 @@
 }
 
 .funding-details li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.funding-details a {
+  color: var(--light);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.funding-details a:hover {
+  text-decoration: underline;
 }
 
 /* ================================= RESOURCES SECTION ================================== */
