@@ -260,9 +260,8 @@
   }
 
 /* ================================= RESOURCES SECTION ================================== */
-/* ----------------------RESOURCES SECTION------------------------*/
 .resources {
-  background-color: #ebeaed; /* wie .about */
+  background-color: #ebeaed;
   padding: 4rem 2rem;
   color: var(--dark);
 }
@@ -275,7 +274,7 @@
 
 .resources p {
   max-width: 800px;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 2rem auto;
   font-size: 1rem;
   color: var(--14); /* passendes Grau */
   text-align: left;
