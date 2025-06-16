@@ -259,6 +259,58 @@
     height: 40px;
   }
 
+/* ================================= Funding ================================== */
+
+.funding-intro {
+  background-color: #ebeaed;
+  padding: 4rem 2rem;
+  color: #111;
+  text-align: left;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.funding-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f6f6f6;
+  padding: 3rem 2rem;
+}
+
+.funder {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.funder img {
+  max-height: 80px;
+  margin-bottom: 1rem;
+}
+
+.funder p {
+  font-size: 0.95rem;
+  color: #111;
+}
+
+.funding-details {
+  background-color: #fff;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.funding-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.funding-details li {
+  margin-bottom: 0.5rem;
+}
+
 /* ================================= RESOURCES SECTION ================================== */
 .resources {
   background-color: #ebeaed;
