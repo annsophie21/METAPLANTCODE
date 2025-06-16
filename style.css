@@ -260,68 +260,70 @@
   }
 
 /* ================================= RESOURCES SECTION ================================== */
+/* ----------------------RESOURCES SECTION------------------------*/
 .resources {
-    background-color: var(--field); /* hellgrauer Hintergrund */
-    padding: 4rem 2rem;
-    text-align: center;
+  background-color: #ebeaed; /* wie .about */
+  padding: 4rem 2rem;
+  color: var(--dark);
 }
 
 .resources h1 {
-    font-size: 2.5rem;
-    color: var(--dark);
-    margin-bottom: 1rem;
+  color: var(--dark);
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
 .resources p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto 2rem auto;
-    color: var(--14); /* dunkles Grau für besseren Kontrast */
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  font-size: 1rem;
+  color: var(--14); /* passendes Grau */
+  text-align: left;
 }
 
-/* === Download Grid === */
+/* Download-Bereich als Grid */
 .downloads {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
+/* Einzelnes Element */
 .resource-item {
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 2rem;
-    width: 300px;
-    max-width: 90%;
-    text-align: left;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .resource-item h3 {
-    color: var(--dark);
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
 }
 
 .resource-item p {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    color: var(--15); /* etwas heller für Sekundärtext */
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  color: #333;
 }
 
-/* === Download Button === */
+/* Download-Button */
 .download-btn {
-    display: inline-block;
-    background-color: var(--dark);
-    color: white;
-    text-decoration: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
+  background-color: var(--dark);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.2s ease;
 }
 
 .download-btn:hover {
-    background-color: var(--light);
+  background-color: var(--light);
 }
 
 /* ================================= Privacy ================================== */
