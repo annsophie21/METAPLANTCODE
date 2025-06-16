@@ -1,5 +1,5 @@
 
-/*----------------------------------------- Grundlegende Einstellungen ---------------------------*/
+/*------------------- Grundlegende Einstellungen -----------------*/
 :root {
     --dark: #0f3b60;
     --light: #1ca4a6;
@@ -25,7 +25,7 @@
     line-height: 1.6;
   }
   
-  /*---------------------------------------- NAVIGATION ----------------------------------*/
+  /*------------------------ NAVIGATION -------------------------*/
   .navbar {
     position: sticky;
     top: 0;
@@ -53,7 +53,7 @@
     color: var(--active);
   }
   
-  /* ------------------------------------------------HERO---------------------------------------- */
+  /* -----------------------------HERO-------------------------- */
   .hero img {
     width: 100%;
     height: auto;
@@ -89,7 +89,7 @@
     font-weight: 600;
   }
   
-  /* ------------------------------------------------ABOUT SECTION-----------------------------------------------*/
+  /* ----------------------ABOUT SECTION------------------------*/
   .about {
     background-color: #ebeaed;
     padding: 4rem 2rem;
@@ -134,7 +134,7 @@
     text-decoration: underline;
   }
   
-  /*--------------------------------------------------- NEWS SECTION ----------------------------------------------*/
+  /*--------------------------- NEWS SECTION ---------------------*/
   .news {
     background-color: #E5F1FB;
     color: var(--dark);
@@ -191,7 +191,7 @@
     text-decoration: underline;
   }
   
-  /* -----------------------------------------------FOOTER -----------------------------------------------*/
+  /* ------------------------FOOTER ---------------------------*/
   footer {
     font-size: 0.9rem;
   }
@@ -259,7 +259,72 @@
     height: 40px;
   }
 
-/* -----------------------------------------Privacy----------------------------------------------*/
+/* ================================= RESOURCES SECTION ================================== */
+.resources {
+    background-color: var(--field); /* hellgrauer Hintergrund */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.resources h1 {
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.resources p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: var(--14); /* dunkles Grau für besseren Kontrast */
+}
+
+/* === Download Grid === */
+.downloads {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.resource-item {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 2rem;
+    width: 300px;
+    max-width: 90%;
+    text-align: left;
+}
+
+.resource-item h3 {
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.resource-item p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: var(--15); /* etwas heller für Sekundärtext */
+}
+
+/* === Download Button === */
+.download-btn {
+    display: inline-block;
+    background-color: var(--dark);
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: var(--light);
+}
+
+/* ================================= Privacy ================================== */
 .privacy-policy {
   background-color: #f4f4f4;
   padding: 3rem 2rem;
@@ -311,7 +376,7 @@
 }
 
 
-  /* -----------------------------------------Contact----------------------------------------------*/
+ /* ================================= Contact ================================== */
 .contact-form {
   background-color: #f4f4f4;
   padding: 3rem 1rem;
@@ -408,7 +473,7 @@
   background-color: var(--active);
 }
   
-  /* -----------------------------------------Responsive----------------------------------------------*/
+/* ================================= Responsive ================================== */
   @media (max-width: 768px) {
     .about-content {
       flex-direction: column;
