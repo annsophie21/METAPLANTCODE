@@ -298,7 +298,8 @@
 
 .funding-text a {
   font-weight: 600;
-  text-decoration: strong;
+  text-decoration: none;
+  color: var(--dark);
 }
 
 .funding-text a:hover {
