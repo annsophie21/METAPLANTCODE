@@ -308,12 +308,12 @@
 /* -------- LOGO GRID SECTION -------- */
 .funding-logos {
   background-color: #f6f6f6;
-  padding: 3rem 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
 }
 
 .funder-logo {
