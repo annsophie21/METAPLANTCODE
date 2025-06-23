@@ -308,7 +308,8 @@
 }
 
 .funding-text a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--active);
 }
 /* -------- LOGO GRID SECTION -------- */
 .funding-logos {
