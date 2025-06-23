@@ -388,7 +388,7 @@
 
 /* ------------ RESEARCH SECTION ------------- */
 .research-section {
-  background-color: #E5F1FB;
+  background-color: white;
   padding: 4rem 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -419,7 +419,7 @@
 
 /* ------------ METHODS SECTION -------------- */
 .methods-section {
-  background-color: white;
+  background-color: #E5F1FB;
   padding: 4rem 2rem;
 }
 
