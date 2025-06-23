@@ -265,61 +265,10 @@
   }
 
 /* ================================= About Us ================================== */
-/* -------------- ABOUT: MEET THE TEAM ------------- */
-.team-section {
-  background-color: var(--field);
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.team-section h2 {
-  color: var(--dark);
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.team-members-intro {
-  color: var(--dark);
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
-}   
-
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.team-member {
-  max-width: 200px;
-}
-
-.team-member img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.team-member h3 {
-  color: var(--dark);
-  font-size: 1.5rem; 
-}
-
-.team-member p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #111;
-}
-
-
-/* ------------- ABOUT: BACKGROUND & HISTORY ------------- */
+/* ------------- BACKGROUND & HISTORY ------------- */
 .background-section {
   background-color: var(--field);
-  color: white;
+  color: var(--dark);
   padding: 4rem 2rem;
 }
 
@@ -496,6 +445,55 @@
   color: var(--dark);
 }
 
+/* -------------- Project-Structure ------------- */
+.team-section {
+  background-color: var(--field);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.team-section h2 {
+  color: var(--dark);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.team-members-intro {
+  color: var(--dark);
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}   
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.team-member {
+  max-width: 200px;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.team-member h3 {
+  color: var(--dark);
+  font-size: 1.5rem; 
+}
+
+.team-member p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #111;
+}
 
 /* ================================= Funding ================================== */
 
