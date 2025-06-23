@@ -287,7 +287,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
-  color: white;
+  color: var(--dark);
 }
 
 .background-content p {
@@ -348,7 +348,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--dark);
+  background: none;
   color: white;
   border: none;
   font-size: 2rem;
