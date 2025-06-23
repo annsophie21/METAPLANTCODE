@@ -279,7 +279,7 @@
 }
 
 .team-members-intro {
-  color: #111;
+  color: var(--dark);
   font-size: 1.1rem;
   max-width: 800px;
   margin: 0 auto 3rem auto;
@@ -318,7 +318,7 @@
 
 /* ------------- ABOUT: BACKGROUND & HISTORY ------------- */
 .background-section {
-  background-color: var(--light);
+  background-color: var(--field);
   color: white;
   padding: 4rem 2rem;
 }
@@ -350,7 +350,7 @@
 
 /* ------------ VISION & MISSION SLIDESHOW ----------- */
 .slideshow-section {
-  background-color: white;
+  background-color: var(--light);
   padding: 4rem 2rem;
   text-align: center;
 }
