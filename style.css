@@ -278,6 +278,13 @@
   font-size: 2rem;
 }
 
+.team-members-intro {
+  color: #111;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}   
+
 .team-grid {
   display: flex;
   flex-wrap: wrap;
