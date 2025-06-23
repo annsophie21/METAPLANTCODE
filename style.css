@@ -342,6 +342,8 @@
 .slide-text p {
   font-size: 1.1rem;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .slide-nav {
