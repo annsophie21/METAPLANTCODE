@@ -340,7 +340,7 @@
 }
 
 .slide-text p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: white;
 }
 
@@ -405,7 +405,7 @@
 
 .research-text {
   flex: 2;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--dark);
 }
 
@@ -441,7 +441,7 @@
 
 .methods-text {
   flex: 2;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--dark);
 }
 
