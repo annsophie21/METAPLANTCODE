@@ -265,47 +265,221 @@
   }
 
 /* ================================= About Us ================================== */
-  .about us {
-    background-color: #ebeaed;
-    padding: 4rem 2rem;
-  }
-  
-  .about us-content {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .about us-img {
-    flex: 1 1 200px;
-    max-width: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .about us-text {
-    flex: 2 1 400px;
-  }
-  
-  .about us-text h2 {
-    color: var(--dark);
-    text-align: left;
-    margin-bottom: 2rem;
-  }
+/* -------------- ABOUT: MEET THE TEAM ------------- */
+.team-section {
+  background-color: var(--field);
+  padding: 4rem 2rem;
+  text-align: center;
+}
 
-  .about us-text h3 {
-    color: var(--dark);
-    padding: 1rem;
-    margin-bottom: 0.2rem;
-    padding-bottom: 0;
-  
+.team-section h2 {
+  color: var(--dark);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
 
-  .about us-text p {
-    margin-bottom: 1rem;
-  }
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.team-member {
+  max-width: 200px;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.team-member p {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+
+/* ------------- ABOUT: BACKGROUND & HISTORY ------------- */
+.background-section {
+  background-color: var(--light);
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.background-content {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.side-heading {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.background-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  flex: 1;
+}
+
+
+/* ------------ VISION & MISSION SLIDESHOW ----------- */
+.slideshow-section {
+  background-color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.slideshow-section h2 {
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.slide img {
+  width: 40%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.slide-text {
+  flex: 1;
+  text-align: left;
+}
+
+.slide-text p {
+  font-size: 1rem;
+  color: #111;
+}
+
+.slide-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--dark);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slide-nav.left {
+  left: 0;
+}
+
+.slide-nav.right {
+  right: 0;
+}
+
+.slide-dots {
+  margin-top: 1.5rem;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: var(--gray-dark);
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+  background-color: var(--dark);
+}
+
+
+/* ------------ RESEARCH SECTION ------------- */
+.research-section {
+  background-color: #E5F1FB;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.research-content {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.research-text {
+  flex: 2;
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.section-title.right {
+  flex: 1;
+  text-align: right;
+  color: var(--dark);
+}
+
+
+/* ------------ METHODS SECTION -------------- */
+.methods-section {
+  background-color: white;
+  padding: 4rem 2rem;
+}
+
+.methods-content {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.section-title.left {
+  flex: 1;
+  text-align: left;
+  color: var(--dark);
+}
+
+.methods-text {
+  flex: 2;
+  font-size: 1rem;
+  color: var(--dark);
+}
+
 
 /* ================================= Funding ================================== */
 
