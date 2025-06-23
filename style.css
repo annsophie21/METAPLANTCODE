@@ -322,6 +322,15 @@
   flex-direction: row;
   align-items: center;
   gap: 2rem;
+  padding: 0 2rem;
+}
+
+.slide-nav.left {
+  left: -2rem;
+}
+
+.slide-nav.right {
+  right: -2rem;
 }
 
 .slide.active {
