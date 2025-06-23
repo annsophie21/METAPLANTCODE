@@ -483,7 +483,12 @@
   object-fit: contain;
   background-color: white;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
+
+.team-member img:hover {
+  transform: scale(1.05);
+  }
 
 .team-member h3 {
   color: var(--dark);
