@@ -345,6 +345,7 @@
 .slideshow-section h2 {
   color: var(--dark);
   margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .slideshow-container {
@@ -450,6 +451,7 @@
   flex: 1;
   text-align: right;
   color: var(--dark);
+  font-size: 2rem;
 }
 
 
@@ -472,6 +474,7 @@
   flex: 1;
   text-align: left;
   color: var(--dark);
+  font-size: 2rem;
 }
 
 .methods-text {
