@@ -1,4 +1,5 @@
 
+
 /*------------------- Grundlegende Einstellungen -----------------*/
 :root {
     --dark: #0f3b60;
@@ -314,7 +315,7 @@
   position: relative;
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 3rem;
   overflow: visible;
 }
 
@@ -323,16 +324,17 @@
   flex-direction: row;
   align-items: center;
   gap: 2rem;
+  padding: 0;
 }
 
 .slide-nav.left {
-  left: 1rem;
-  transform: none;
+  left: 0rem;
+  transform: translateX(-100%);
 }
 
 .slide-nav.right {
-  right: 1rem;
-  transform: none;    
+  right: 0rem;
+  transform: translateX(100%);    
 }
 
 .slide.active {
@@ -340,11 +342,9 @@
 }
 
 .slide img {
-  width: 250px;
-  height: auto;
+  width: 40%;
   border-radius: 8px;
-  object-fit: contain;
-  margin-right: 2rem;
+  object-fit: cover;
 }
 
 .slide-text {
@@ -373,11 +373,11 @@
 }
 
 .slide-nav.left {
-  left: -2.5rem;
+  left: 0;
 }
 
 .slide-nav.right {
-  right: -2.5rem;
+  right: 0;
 }
 
 .slide-dots {
