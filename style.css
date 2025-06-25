@@ -314,7 +314,7 @@
   position: relative;
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 4rem;
   overflow: visible;
 }
 
@@ -326,13 +326,13 @@
 }
 
 .slide-nav.left {
-  left: 0rem;
-  transform: translateX(-100%);
+  left: 1rem;
+  transform: none;
 }
 
 .slide-nav.right {
-  right: 0rem;
-  transform: translateX(100%);    
+  right: 1rem;
+  transform: none;    
 }
 
 .slide.active {
