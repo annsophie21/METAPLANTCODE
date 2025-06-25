@@ -314,7 +314,8 @@
   position: relative;
   max-width: 900px;
   margin: 0 auto;
-  overflow: hidden;
+  padding: 0 3rem;
+  overflow: visible;
 }
 
 .slide {
@@ -326,11 +327,13 @@
 }
 
 .slide-nav.left {
-  left: 0.5rem;
+  left: 0rem;
+  transform: translateX(-100%);
 }
 
 .slide-nav.right {
-  right: 0.5rem;
+  right: 0rem;
+  transform: translateX(100%);    
 }
 
 .slide.active {
