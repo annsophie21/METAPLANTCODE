@@ -326,11 +326,11 @@
 }
 
 .slide-nav.left {
-  left: -2rem;
+  left: -2.5rem;
 }
 
 .slide-nav.right {
-  right: -2rem;
+  right: -2.5rem;
 }
 
 .slide.active {
