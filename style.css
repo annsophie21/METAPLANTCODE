@@ -323,7 +323,6 @@
   flex-direction: row;
   align-items: center;
   gap: 2rem;
-  padding: 0;
 }
 
 .slide-nav.left {
@@ -341,9 +340,11 @@
 }
 
 .slide img {
-  width: 40%;
+  width: 250px;
+  height: auto;
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: contain;
+  margin-right: 2rem;
 }
 
 .slide-text {
@@ -372,11 +373,11 @@
 }
 
 .slide-nav.left {
-  left: 0;
+  left: -2.5rem;
 }
 
 .slide-nav.right {
-  right: 0;
+  right: -2.5rem;
 }
 
 .slide-dots {
