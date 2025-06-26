@@ -568,12 +568,16 @@
 /* -------- LOGO GRID SECTION -------- */
 .funding-logos {
   background-color: white;
+  padding: 2rem;
+}
+
+.funder {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  padding: 2rem;
+  width: 100%;
 }
 
 .funder-logo {
