@@ -527,7 +527,7 @@
 .funding-content {
   max-width: 1200px;
   margin: auto;
-  color: black;
+  color: var(--dark);
 }
 
 .funding-text h1 {
