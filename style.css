@@ -295,6 +295,7 @@
   font-size: 1.1rem;
   line-height: 1.8;
   flex: 1;
+  color: black;
 }
 
 
@@ -421,7 +422,7 @@
 .research-text {
   flex: 2;
   font-size: 1.1rem;
-  color: var(--dark);
+  color: black;
 }
 
 .section-title.right {
@@ -457,7 +458,7 @@
 .methods-text {
   flex: 2;
   font-size: 1.1rem;
-  color: var(--dark);
+  color: black;
 }
 
 /* -------------- Project-Structure ------------- */
@@ -474,7 +475,7 @@
 }
 
 .team-members-intro {
-  color: var(--dark);
+  color: black;
   font-size: 1.1rem;
   max-width: 800px;
   margin: 0 auto 3rem auto;
@@ -513,7 +514,7 @@
 .team-member p {
   margin-top: 0.5rem;
   font-size: 1.1rem;
-  color: var(--dark);
+  color: black;
 }
 
 /* ================================= Funding ================================== */
@@ -526,7 +527,7 @@
 .funding-content {
   max-width: 1200px;
   margin: auto;
-  color: var(--dark);
+  color: black;
 }
 
 .funding-text h1 {
@@ -539,6 +540,7 @@
   line-height: 1.6;
   margin-bottom: 2rem;
 }
+
 .funding-text h2 {
   margin-bottom: 1rem;
 }
