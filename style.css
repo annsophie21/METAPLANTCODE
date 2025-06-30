@@ -253,6 +253,11 @@
     object-fit: contain;
     display: inline-block;
     vertical-align: middle;
+    transition: transform 0.2s ease;
+  }
+
+  .footer-social img:hover {
+    transform: scale(1.05);
   }
   
   /* ----------Bottom Logo--------- */
@@ -264,11 +269,6 @@
   
   .footer-bottom img {
     height: 40px;
-    transition: transform 0.2s ease;
-  }
-
-  .footer-bottom img:hover {
-    transform: scale(1.05);
   }
 
 /* ================================= About Us ================================== */
