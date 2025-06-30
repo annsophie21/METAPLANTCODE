@@ -187,10 +187,11 @@
   }
   
   .news-link  {
+    display: inline-block; 
     color: var(--light);
     font-weight: 600;
     text-decoration: none;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
   }
 
   .news-link:hover {
