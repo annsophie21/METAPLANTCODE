@@ -58,7 +58,7 @@
   /* -----------------------------HERO-------------------------- */
     .hero {
       height: 500px;
-      background-image: url('https://github.com/annsophie21/METAPLANTCODE/blob/main/pics/teeblätter.jpg'); /* Pfad zu deinem Bild */
+      background-image: url('pics/teeblätter.jpg'); /* Pfad zu deinem Bild */
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
