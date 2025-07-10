@@ -56,36 +56,44 @@
   }
   
   /* -----------------------------HERO-------------------------- */
-    .hero {
-      height: 500px;
-      background-image: url('pics/teeblätter.jpg'); /* Pfad zu deinem Bild */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+    .hero-parallax {
       position: relative;
+      height: 400px; /* Passe die Höhe an, wie du willst */
+      overflow: hidden;
     }
     
-    /* Optional: Falls du mobile Geräte mit Fallback unterstützen willst */
-    @media (max-width: 768px) {
-      .hero {
-        background-attachment: scroll;
-      }
-    }
-    
-    .hero .watermark {
+    .parallax-bg {
+      background-image: url('pics/teeblätter.jpg'); /* Passe den Pfad an */
+      background-size: 100% auto;
+      background-position: center;
       position: absolute;
-      bottom: 8px;
-      right: 8px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 150%; /* größer als der Container für Bewegung */
+      z-index: 1;
+      transform: translateY(0);
+      transition: transform 0.1s ease-out;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 1rem;
+    }
+    
+    .watermark {
       font-size: 0.6rem;
-      background-color: rgba(255, 255, 255, 0.5); /* Milchiger Hintergrund */
+      background-color: rgba(255, 255, 255, 0.5);
       color: var(--dark);
       padding: 2px 6px;
       border-radius: 3px;
-      pointer-events: none;
-      user-select: none;
-      font-family: 'Nunito', sans-serif;
       font-weight: 600;
+      user-select: none;
     }
 
   
