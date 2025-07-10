@@ -64,7 +64,7 @@
     
     .parallax-bg {
       background-image: url('pics/teeblaetter.jpg');
-      background-size: cover;
+      background-size: 100% auto;
       background-position: center;
       position: absolute;
       top: -25%; /* früher war top: 0 */
