@@ -19,8 +19,11 @@
     </header>
 
     <!-- HERO IMAGE -->
-    <section class="hero">
-      <div class="watermark">©MetaPlantCode</div>
+    <section class="hero-parallax">
+      <div class="parallax-bg"></div>
+      <div class="hero-content">
+        <div class="watermark">© MetaPlantCode</div>
+      </div>
     </section>
 
     <!-- WHAT IS METAPLANTCODE -->
@@ -95,6 +98,14 @@
         <a href="https://annsophie21.github.io/METAPLANTCODE/"><img src="pics/metaplantlogo.png" alt="METAPLANTCODE-Logo" />
         </div>
     </footer>
-
+    
+    <script>
+      window.addEventListener("scroll", function () {
+        const bg = document.querySelector(".parallax-bg");
+        const scrolled = window.scrollY;
+        bg.style.transform = `translateY(${scrolled * 0.3}px)`; // Geschwindigkeit anpassbar
+      });
+    </script>
+    
 </body>
 </html>
