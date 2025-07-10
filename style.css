@@ -56,40 +56,38 @@
   }
   
   /* -----------------------------HERO-------------------------- */
-  .hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-height: 500px;
-    object-fit: cover;
-  }
+    .hero {
+      height: 500px;
+      background-image: url('../pics/teeblätter.jpg'); /* Pfad zu deinem Bild */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    
+    /* Optional: Falls du mobile Geräte mit Fallback unterstützen willst */
+    @media (max-width: 768px) {
+      .hero {
+        background-attachment: scroll;
+      }
+    }
+    
+    .hero .watermark {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      font-size: 0.6rem;
+      background-color: rgba(255, 255, 255, 0.5); /* Milchiger Hintergrund */
+      color: var(--dark);
+      padding: 2px 6px;
+      border-radius: 3px;
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+    }
 
-  .image-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .image-wrapper img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .watermark {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    font-size: 0.6rem;
-    background-color: rgba(255, 255, 255, 0.5); /* Milchiger, heller Hintergrund */
-    color: var(--dark); /* dein METAPLANTCODE-Blau */
-    padding: 2px 6px;
-    border-radius: 3px;
-    pointer-events: none;
-    user-select: none;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-  }
   
   /* ----------------------ABOUT SECTION------------------------*/
   .about {
