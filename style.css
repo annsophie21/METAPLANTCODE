@@ -531,6 +531,86 @@
   color: black;
 }
 
+/* ================================= Funding ================================== */
+
+.funding {
+  background-color: #ebeaed;
+  padding: 4rem 2rem;
+}
+
+.funding-content {
+  max-width: 1200px;
+  margin: auto;
+  color: var(--dark);
+}
+
+.funding-text h1 {
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.funding-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.funding-text h2 {
+  margin-bottom: 1rem;
+}
+
+.funding-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.funding-text li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.funding-text a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.funding-text a:hover {
+  text-decoration: none;
+  color: var(--active);
+}
+/* -------- LOGO GRID SECTION -------- */
+.funding-logos {
+  background-color: white;
+  padding: 2rem;
+}
+
+.funding-title h2{
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.funder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.funder-logo {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+  margin: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.funder-logo:hover {
+  transform: scale(1.05);
+}
+
 /* ================================= NETWORKING ================================== */
 .network-section {
   background-color: #ffffff;
@@ -637,87 +717,6 @@
 
 .hidden {
   display: none;
-}
-
-
-/* ================================= Funding ================================== */
-
-.funding {
-  background-color: #ebeaed;
-  padding: 4rem 2rem;
-}
-
-.funding-content {
-  max-width: 1200px;
-  margin: auto;
-  color: var(--dark);
-}
-
-.funding-text h1 {
-  color: var(--dark);
-  margin-bottom: 1rem;
-}
-
-.funding-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.funding-text h2 {
-  margin-bottom: 1rem;
-}
-
-.funding-text ul {
-  list-style: none;
-  padding: 0;
-}
-
-.funding-text li {
-  margin-bottom: 0.8rem;
-  font-size: 1rem;
-}
-
-.funding-text a {
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--dark);
-}
-
-.funding-text a:hover {
-  text-decoration: none;
-  color: var(--active);
-}
-/* -------- LOGO GRID SECTION -------- */
-.funding-logos {
-  background-color: white;
-  padding: 2rem;
-}
-
-.funding-title h2{
-  color: var(--dark);
-  margin-bottom: 1rem;
-}
-
-.funder {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  width: 100%;
-}
-
-.funder-logo {
-  width: 200px;
-  height: 100px;
-  object-fit: contain;
-  margin: 1rem;
-  transition: transform 0.2s ease;
-}
-
-.funder-logo:hover {
-  transform: scale(1.05);
 }
 
 /* ================================= RESOURCES SECTION ================================== */
