@@ -5,24 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Networking – MetaPlantCode</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="../pics/M-logo2.png">
 </head>
 <body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="https://metaplantcode.github.io/metaplantcode/index.html">
+        <img src="../pics/metaplantlogo.png" alt="METAPLANTCODE-Logo" />
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="../about/index.html">About</a>
+      <a href="../funding/index.html">Funding</a>
+      <a href="../networking/index.html" class="active">Networking</a>
+      <a href="../resources/index.html">Resources</a>
+    </nav>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <section class="hero-parallax">
+    <div class="parallax-bg" style="background-image: url('../pics/netzwerk.jpg');"></div>
+    <div class="hero-content">
+      <div class="watermark">© MetaPlantCode</div>
+    </div>
+  </section>
+
+  <!-- NETWORKING SECTION -->
   <section class="network-section">
     <h1>Networking</h1>
     <p>Explore the MetaPlantCode network and discover our collaborating projects.</p>
 
     <div class="network-container">
-      <!-- Example Project Node -->
+      <!-- Beispiel-Projektknoten -->
       <div class="project-node" style="top: 10%; left: 20%;" data-title="GBIF" data-description="Global Biodiversity Information Facility" data-link="https://www.gbif.org">
-        <img src="pics/gbif_logo.png" alt="GBIF" />
+        <img src="logos/gbif_logo.png" alt="GBIF" />
       </div>
 
       <div class="project-node" style="top: 50%; left: 60%;" data-title="DiSSCo" data-description="Distributed System of Scientific Collections" data-link="https://www.dissco.eu">
-        <img src="pics/dissco_logo.png" alt="DiSSCo" />
+        <img src="logos/dissco_logo.png" alt="DiSSCo" />
       </div>
 
       <div class="project-node" style="top: 30%; left: 70%;" data-title="Biodiversa+" data-description="Supporting European biodiversity research" data-link="https://www.biodiversa.eu">
-        <img src="pics/biodiversa.png" alt="Biodiversa+" />
+        <img src="logos/biodiversa.png" alt="Biodiversa+" />
       </div>
 
       <!-- Tooltip -->
@@ -32,12 +58,40 @@
         <a href="#" target="_blank" id="tooltip-link">Learn more →</a>
       </div>
 
-      <!-- SVG lines for network -->
+      <!-- SVG Linien -->
       <svg class="network-lines"></svg>
     </div>
   </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <a href="../index.html">What is MetaPlantCode</a>
+      <a href="../privacy/index.html">Privacy</a>
+      <a href="../contact/index.html">Contact</a>
+    </div>
+    <div class="footer-middle">
+      <a href="https://www.biodiversa.eu/2024/04/15/metaplantcode/" target="_blank"><img src="../pics/biodiversa_logo_blanc.svg" alt="Biodiversa+" /></a>
+      <img src="../pics/ec.jpg" alt="EU" />
+      <div class="footer-text"><p>Co-funded by<br>the European Union</p></div>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/people/Metaplantcode/61561470754476/" target="_blank"><img src="../pics/facebook.png" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/metaplantcode/" target="_blank"><img src="../pics/instagram.png" alt="Instagram" /></a>
+    </div>
+    <div class="footer-bottom">
+      <a href="../index.html"><img src="../pics/metaplantlogo.png" alt="METAPLANTCODE-Logo" /></a>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const bg = document.querySelector(".parallax-bg");
+      const scrolled = window.scrollY;
+      bg.style.transform = `translateY(${scrolled * 0.3}px)`;
+    });
+  </script>
+
   <script src="network.js"></script>
 </body>
 </html>
-
