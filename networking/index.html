@@ -51,12 +51,13 @@
         <img src="logos/DNAquaIMG.png" alt="DNAquaIMG" />
       </div>
 
-      <!-- Tooltip -->
-      <div id="tooltip" class="tooltip hidden">
-        <h3 id="tooltip-title"></h3>
-        <p id="tooltip-description"></p>
-        <a href="#" target="_blank" id="tooltip-link">Learn more →</a>
-      </div>
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip hidden">
+      <h3 id="tooltip-title"></h3>
+      <p id="tooltip-description"></p>
+      <a href="#" target="_blank" id="tooltip-link">Learn more →</a>
+    </div>
+
 
       <!-- SVG Linien -->
       <svg class="network-lines"></svg>
@@ -85,13 +86,37 @@
   </footer>
 
   <script>
-    window.addEventListener("scroll", function () {
-      const bg = document.querySelector(".parallax-bg");
-      const scrolled = window.scrollY;
-      bg.style.transform = `translateY(${scrolled * 0.3}px)`;
+    const nodes = document.querySelectorAll('.project-node');
+    const tooltip = document.getElementById('tooltip');
+    const tooltipTitle = document.getElementById('tooltip-title');
+    const tooltipDescription = document.getElementById('tooltip-description');
+    const tooltipLink = document.getElementById('tooltip-link');
+
+    nodes.forEach(node => {
+      node.addEventListener('click', (e) => {
+        const title = node.getAttribute('data-title');
+        const description = node.getAttribute('data-description');
+        const link = node.getAttribute('data-link');
+
+        if (!title || !description || !link) return;
+
+        tooltipTitle.textContent = title;
+        tooltipDescription.textContent = description;
+        tooltipLink.href = link;
+
+        const rect = node.getBoundingClientRect();
+        tooltip.style.top = (rect.top + window.scrollY + rect.height + 10) + 'px';
+        tooltip.style.left = (rect.left + window.scrollX) + 'px';
+
+        tooltip.classList.remove('hidden');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.project-node') && !e.target.closest('#tooltip')) {
+        tooltip.classList.add('hidden');
+      }
     });
   </script>
-
-  <script src="network.js"></script>
 </body>
 </html>
