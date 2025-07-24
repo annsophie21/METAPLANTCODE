@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Networking – MetaPlantCode</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="network-section">
+    <h1>Networking</h1>
+    <p>Explore the MetaPlantCode network and discover our collaborating projects.</p>
+
+    <div class="network-container">
+      <!-- Example Project Node -->
+      <div class="project-node" style="top: 10%; left: 20%;" data-title="GBIF" data-description="Global Biodiversity Information Facility" data-link="https://www.gbif.org">
+        <img src="pics/gbif_logo.png" alt="GBIF" />
+      </div>
+
+      <div class="project-node" style="top: 50%; left: 60%;" data-title="DiSSCo" data-description="Distributed System of Scientific Collections" data-link="https://www.dissco.eu">
+        <img src="pics/dissco_logo.png" alt="DiSSCo" />
+      </div>
+
+      <div class="project-node" style="top: 30%; left: 70%;" data-title="Biodiversa+" data-description="Supporting European biodiversity research" data-link="https://www.biodiversa.eu">
+        <img src="pics/biodiversa.png" alt="Biodiversa+" />
+      </div>
+
+      <!-- Tooltip -->
+      <div id="tooltip" class="tooltip hidden">
+        <h3 id="tooltip-title"></h3>
+        <p id="tooltip-description"></p>
+        <a href="#" target="_blank" id="tooltip-link">Learn more →</a>
+      </div>
+
+      <!-- SVG lines for network -->
+      <svg class="network-lines"></svg>
+    </div>
+  </section>
+
+  <script src="network.js"></script>
+</body>
+</html>
 
