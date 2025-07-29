@@ -44,7 +44,11 @@
       </div>
 
       <!-- NETWORK NODES -->
-      <div class="node" style="top: 10%; left: 50%;" data-title="BioMonI" data-description="Biodiversity Monitoring of Island Ecosystems" data-link="https://biomoni.github.io/BioMonI/index.html">
+      <div class="node" 
+        style="top: 10%; left: 50%;" 
+        data-title="BioMonI" 
+        data-description="Biodiversity Monitoring of Island Ecosystems" 
+        data-link="https://biomoni.github.io/BioMonI/index.html">
         <img src="logos/Logo Biomoni-v2.jpg" alt="BioMonI Logo" />
       </div>
 
@@ -101,8 +105,8 @@
         desc.textContent = node.dataset.description;
         link.href = node.dataset.link;
 
-        tooltip.style.top = `${rect.top + window.scrollY + 80}px`;
-        tooltip.style.left = `${rect.left + window.scrollX}px`;
+        tooltip.style.top = '100px';
+        tooltip.style.left = '100px';
         tooltip.classList.remove('hidden');
       });
     });
