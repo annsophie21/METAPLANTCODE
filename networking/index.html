@@ -94,58 +94,65 @@
     </div>
   </footer>
 
-  <script>
-    const nodes = document.querySelectorAll('.node');
-    const tooltip = document.getElementById('tooltip');
-    const title = document.getElementById('tooltip-title');
-    const desc = document.getElementById('tooltip-description');
-    const link = document.getElementById('tooltip-link');
+<script>
+  // Tooltip-Handling
+  const nodes = document.querySelectorAll('.node');
+  const tooltip = document.getElementById('tooltip');
+  const title = document.getElementById('tooltip-title');
+  const desc = document.getElementById('tooltip-description');
+  const link = document.getElementById('tooltip-link');
 
-    nodes.forEach(node => {
-      node.addEventListener('click', e => {
-        const rect = node.getBoundingClientRect();
-        title.textContent = node.dataset.title;
-        desc.textContent = node.dataset.description;
-        link.href = node.dataset.link;
+  nodes.forEach(node => {
+    node.addEventListener('click', e => {
+      const rect = node.getBoundingClientRect();
+      title.textContent = node.dataset.title;
+      desc.textContent = node.dataset.description;
+      link.href = node.dataset.link;
 
-        tooltip.style.top = '100px';
-        tooltip.style.left = '100px';
-        tooltip.classList.remove('hidden');
-      });
+      tooltip.style.top = '100px'; // Du kannst das ggf. dynamisch machen
+      tooltip.style.left = '100px';
+      tooltip.classList.remove('hidden');
     });
+  });
 
-    document.addEventListener('click', e => {
-      if (!e.target.closest('.node') && !e.target.closest('#tooltip')) {
-        tooltip.classList.add('hidden');
-      }
-    });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.node') && !e.target.closest('#tooltip')) {
+      tooltip.classList.add('hidden');
+    }
+  });
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const center = document.querySelector('.project-node.center');
-      const projects = document.querySelectorAll('.project-node:not(.center)');
-      const svg = document.querySelector('.network-lines');
-      svg.innerHTML = '';
-    
-      const centerRect = center.getBoundingClientRect();
-      const cx = centerRect.left + centerRect.width / 2 + window.scrollX;
-      const cy = centerRect.top + centerRect.height / 2 + window.scrollY;
-    
-      projects.forEach(project => {
-        const rect = project.getBoundingClientRect();
-        const x = rect.left + rect.width / 2 + window.scrollX;
-        const y = rect.top + rect.height / 2 + window.scrollY;
-    
-        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        line.setAttribute('x1', cx);
-        line.setAttribute('y1', cy);
-        line.setAttribute('x2', x);
-        line.setAttribute('y2', y);
-        line.setAttribute('stroke', '#ccc');
-        line.setAttribute('stroke-width', '2');
-    
-        svg.appendChild(line);
-      });
+  // Linien vom Zentrum zu den Projekten
+  function drawLines() {
+    const center = document.querySelector('.project-node.center');
+    const projects = document.querySelectorAll('.project-node:not(.center)');
+    const svg = document.querySelector('.network-lines');
+    svg.innerHTML = ''; // Alte Linien entfernen
+
+    const centerRect = center.getBoundingClientRect();
+    const cx = centerRect.left + centerRect.width / 2 + window.scrollX;
+    const cy = centerRect.top + centerRect.height / 2 + window.scrollY;
+
+    projects.forEach(project => {
+      const rect = project.getBoundingClientRect();
+      const x = rect.left + rect.width / 2 + window.scrollX;
+      const y = rect.top + rect.height / 2 + window.scrollY;
+
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', cx);
+      line.setAttribute('y1', cy);
+      line.setAttribute('x2', x);
+      line.setAttribute('y2', y);
+      line.setAttribute('stroke', '#ccc');
+      line.setAttribute('stroke-width', '2');
+      svg.appendChild(line);
     });
-  </script>
+  }
+
+  // Events zum Neuzeichnen bei Lageänderung
+  window.addEventListener('DOMContentLoaded', drawLines);
+  window.addEventListener('resize', drawLines);
+  window.addEventListener('scroll', drawLines);
+</script>
+
 </body>
 </html>
