@@ -640,6 +640,7 @@
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s ease;
+  z-index: 1;
 }
 
 .node:hover {
@@ -698,6 +699,16 @@
 
 .hidden {
   display: none;
+}
+
+.network-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* ================================= RESOURCES SECTION ================================== */
