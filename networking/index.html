@@ -34,37 +34,35 @@
 
   <!-- NETWORKING SECTION -->
   <section class="network-section">
-    <h1>Networking</h1>
+    <h2>Networking</h2>
     <p>Explore the MetaPlantCode network and discover our collaborating projects.</p>
 
     <div class="network-container">
-      <!-- Beispiel-Projektknoten -->
-      <div class="project-node" style="top: 50%; left: 50%;" data-title="MetaPlantCode">
-        <img src="../pics/M-logo2.png" alt="MetaPlantCode" />
-      </div>
-      
-      <div class="project-node" style="top: 10%; left: 20%;" data-title="BioMonI" data-description="Biodiversity Monitoring of Island Ecosystems" data-link="https://biomoni.github.io/BioMonI/index.html">
-        <img src="logos/Logo Biomoni-v2.jpg" alt="BioMonI" />
+      <!-- CENTER NODE -->
+      <div class="node center" data-title="MetaPlantCode" data-description="Central project node" data-link="#">
+        <img src="../pics/M-logo2.png" alt="MetaPlantCode Logo" />
       </div>
 
-      <div class="project-node" style="top: 30%; left: 70%;" data-title="DNAquaIMG" data-description="Innovating transnational aquatic biodiversity monitoring using high-throughput DNA tools and automated image recognition" data-link="https://dnaquaimg.eu/">
-        <img src="logos/DNAquaIMG.png" alt="DNAquaIMG" />
+      <!-- NETWORK NODES -->
+      <div class="node" style="top: 10%; left: 50%;" data-title="BioMonI" data-description="Biodiversity Monitoring of Island Ecosystems" data-link="https://biomoni.github.io/BioMonI/index.html">
+        <img src="logos/Logo Biomoni-v2.jpg" alt="BioMonI Logo" />
       </div>
 
-      <div class="project-node" style="top: 70%; left: 30%;" data-title="OneSTOP" data-description="OneSTOP is pioneering a joined-up approach to minimise the introduction, establishment, spread and impact of terrestrial invasive alien species" data-link="https://onestop-project.eu/">
+      <div class="node" style="top: 50%; left: 85%;" data-title="DNAquaIMG" data-description="Innovating aquatic biodiversity monitoring with DNA tools" data-link="https://dnaquaimg.eu/">
+        <img src="logos/DNAquaIMG.png" alt="DNAquaIMG Logo" />
+      </div>
+
+      <div class="node" style="top: 80%; left: 30%;" data-title="OneSTOP" data-description="OneSTOP is pioneering a joined-up approach to minimise the introduction, establishment, spread and impact of terrestrial invasive alien species" data-link="https://onestop-project.eu/">
         <img src="logos/OneSTOP.svg" alt="OneSTOP" />
       </div>
 
-    <!-- Tooltip -->
-    <div id="tooltip" class="tooltip hidden">
-      <h3 id="tooltip-title"></h3>
-      <p id="tooltip-description"></p>
-      <a href="#" target="_blank" id="tooltip-link">Learn more →</a>
-    </div>
 
-
-      <!-- SVG Linien -->
-      <svg class="network-lines"></svg>
+      <!-- TOOLTIP -->
+      <div id="tooltip" class="tooltip hidden">
+        <h3 id="tooltip-title"></h3>
+        <p id="tooltip-description"></p>
+        <a href="#" target="_blank" id="tooltip-link">Learn more →</a>
+      </div>
     </div>
   </section>
 
@@ -90,34 +88,27 @@
   </footer>
 
   <script>
-    const nodes = document.querySelectorAll('.project-node');
+    const nodes = document.querySelectorAll('.node');
     const tooltip = document.getElementById('tooltip');
-    const tooltipTitle = document.getElementById('tooltip-title');
-    const tooltipDescription = document.getElementById('tooltip-description');
-    const tooltipLink = document.getElementById('tooltip-link');
+    const title = document.getElementById('tooltip-title');
+    const desc = document.getElementById('tooltip-description');
+    const link = document.getElementById('tooltip-link');
 
     nodes.forEach(node => {
-      node.addEventListener('click', (e) => {
-        const title = node.getAttribute('data-title');
-        const description = node.getAttribute('data-description');
-        const link = node.getAttribute('data-link');
-
-        if (!title || !description || !link) return;
-
-        tooltipTitle.textContent = title;
-        tooltipDescription.textContent = description;
-        tooltipLink.href = link;
-
+      node.addEventListener('click', e => {
         const rect = node.getBoundingClientRect();
-        tooltip.style.top = (rect.top + window.scrollY + rect.height + 10) + 'px';
-        tooltip.style.left = (rect.left + window.scrollX) + 'px';
+        title.textContent = node.dataset.title;
+        desc.textContent = node.dataset.description;
+        link.href = node.dataset.link;
 
+        tooltip.style.top = `${rect.top + window.scrollY + 80}px`;
+        tooltip.style.left = `${rect.left + window.scrollX}px`;
         tooltip.classList.remove('hidden');
       });
     });
 
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.project-node') && !e.target.closest('#tooltip')) {
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.node') && !e.target.closest('#tooltip')) {
         tooltip.classList.add('hidden');
       }
     });
