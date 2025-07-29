@@ -119,6 +119,33 @@
         tooltip.classList.add('hidden');
       }
     });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const center = document.querySelector('.project-node.center');
+      const projects = document.querySelectorAll('.project-node:not(.center)');
+      const svg = document.querySelector('.network-lines');
+      svg.innerHTML = '';
+    
+      const centerRect = center.getBoundingClientRect();
+      const cx = centerRect.left + centerRect.width / 2 + window.scrollX;
+      const cy = centerRect.top + centerRect.height / 2 + window.scrollY;
+    
+      projects.forEach(project => {
+        const rect = project.getBoundingClientRect();
+        const x = rect.left + rect.width / 2 + window.scrollX;
+        const y = rect.top + rect.height / 2 + window.scrollY;
+    
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', cx);
+        line.setAttribute('y1', cy);
+        line.setAttribute('x2', x);
+        line.setAttribute('y2', y);
+        line.setAttribute('stroke', '#ccc');
+        line.setAttribute('stroke-width', '2');
+    
+        svg.appendChild(line);
+      });
+    });
   </script>
 </body>
 </html>
