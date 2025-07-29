@@ -654,7 +654,7 @@
 }
 
 .node.center {
-  background-color: var(--light);
+  background-color: var(--dark);
   width: 100px;
   height: 100px;
   left: 50%;
