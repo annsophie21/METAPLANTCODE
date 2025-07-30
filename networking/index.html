@@ -123,8 +123,8 @@
 
   // Linien vom Zentrum zu den Projekten
   function drawLines() {
-    const center = document.querySelector('.project-node.center');
-    const projects = document.querySelectorAll('.project-node:not(.center)');
+    const center = document.querySelector('.node.center');
+    const projects = document.querySelectorAll('.node:not(.center)');
     const svg = document.querySelector('.network-lines');
     svg.innerHTML = ''; // Alte Linien entfernen
 
