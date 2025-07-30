@@ -33,45 +33,18 @@
   </section>
 
   <!-- NETWORKING SECTION -->
-  <section class="network-section">
-    <h2>Networking</h2>
-    <p>Explore the MetaPlantCode network and discover our collaborating projects.</p>
-
-    <div class="network-container">
-      <svg class="network-lines"></svg>
-      
-      <!-- CENTER NODE -->
-      <div class="node center">
-        <img src="../pics/M-logo1.png" alt="MetaPlantCode Logo" />
-      </div>
-
-      <!-- NETWORK NODES -->
-      <div class="node" 
-        style="top: 10%; left: 50%;" 
-        data-title="BioMonI" 
-        data-description="Biodiversity Monitoring of Island Ecosystems" 
-        data-link="https://biomoni.github.io/BioMonI/index.html">
-        <img src="logos/Logo Biomoni-v2.jpg" alt="BioMonI Logo" />
-      </div>
-
-      <div class="node" style="top: 50%; left: 85%;" data-title="DNAquaIMG" data-description="Innovating aquatic biodiversity monitoring with DNA tools" data-link="https://dnaquaimg.eu/">
-        <img src="logos/DNAquaIMG.png" alt="DNAquaIMG Logo" />
-      </div>
-
-      <div class="node" style="top: 80%; left: 30%;" data-title="OneSTOP" data-description="OneSTOP is pioneering a joined-up approach to minimise the introduction, establishment, spread and impact of terrestrial invasive alien species" data-link="https://onestop-project.eu/">
-        <img src="logos/OneSTOP.png" alt="OneSTOP" />
-      </div>
-
-
-      <!-- TOOLTIP -->
-      <div id="tooltip" class="tooltip hidden">
-        <h3 id="tooltip-title"></h3>
-        <p id="tooltip-description"></p>
-        <a href="#" target="_blank" id="tooltip-link">Learn more</a>
-      </div>
+  <div class="network-container">
+    <svg class="network-lines"></svg>
+    <div class="node center">
+      <img src="../pics/M-logo1.png" alt="MetaPlantCode Logo" />
     </div>
-
-  </section>
+    <!-- Die anderen Nodes werden von JavaScript erzeugt -->
+    <div id="tooltip" class="tooltip hidden">
+      <h3 id="tooltip-title"></h3>
+      <p id="tooltip-description"></p>
+      <a href="#" target="_blank" id="tooltip-link">Learn more</a>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -95,25 +68,91 @@
   </footer>
 
 <script>
-  // Tooltip-Handling
-  const nodes = document.querySelectorAll('.node');
+    const projects = [
+    {
+      title: "BioMonI",
+      description: "Biodiversity Monitoring of Island Ecosystems",
+      link: "https://biomoni.github.io/BioMonI/index.html",
+      logo: "logos/Logo Biomoni-v2.jpg"
+    },
+    {
+      title: "DNAquaIMG",
+      description: "Innovating aquatic biodiversity monitoring with DNA tools",
+      link: "https://dnaquaimg.eu/",
+      logo: "logos/DNAquaIMG.png"
+    },
+    {
+      title: "OneSTOP",
+      description: "Pioneering a joined-up approach to minimise the introduction, establishment, spread and impact of terrestrial invasive alien species",
+      link: "https://onestop-project.eu/",
+      logo: "logos/OneSTOP.png"
+    },
+    // Weitere Projekte hier
+  ];
+
+  const container = document.querySelector('.network-container');
+  const svg = document.querySelector('.network-lines');
+  const centerNode = container.querySelector('.node.center');
   const tooltip = document.getElementById('tooltip');
   const title = document.getElementById('tooltip-title');
   const desc = document.getElementById('tooltip-description');
   const link = document.getElementById('tooltip-link');
 
-  nodes.forEach(node => {
-    node.addEventListener('click', e => {
-      const rect = node.getBoundingClientRect();
-      title.textContent = node.dataset.title;
-      desc.textContent = node.dataset.description;
-      link.href = node.dataset.link;
+  function createProjectNodes() {
+    const containerRect = container.getBoundingClientRect();
+    const width = container.offsetWidth;
+    const height = container.offsetHeight;
 
-      tooltip.style.top = '100px'; // Du kannst das ggf. dynamisch machen
-      tooltip.style.left = '100px';
-      tooltip.classList.remove('hidden');
+    const centerRect = centerNode.getBoundingClientRect();
+    const cx = centerNode.offsetLeft + centerNode.offsetWidth / 2;
+    const cy = centerNode.offsetTop + centerNode.offsetHeight / 2;
+
+    projects.forEach(proj => {
+      // Zufällige Position (mit etwas Puffer)
+      const x = Math.random() * (width - 100);
+      const y = Math.random() * (height - 100);
+
+      const node = document.createElement('div');
+      node.classList.add('node');
+      node.style.left = `${x}px`;
+      node.style.top = `${y}px`;
+      node.dataset.title = proj.title;
+      node.dataset.description = proj.description;
+      node.dataset.link = proj.link;
+
+      const img = document.createElement('img');
+      img.src = proj.logo;
+      img.alt = proj.title + ' Logo';
+      node.appendChild(img);
+
+      container.appendChild(node);
+
+      // Linie zeichnen
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      const x1 = cx;
+      const y1 = cy;
+      const x2 = x + 40; // Mitte des Nodes
+      const y2 = y + 40;
+
+      line.setAttribute('x1', x1);
+      line.setAttribute('y1', y1);
+      line.setAttribute('x2', x2);
+      line.setAttribute('y2', y2);
+      line.setAttribute('stroke', '#ccc');
+      line.setAttribute('stroke-width', '2');
+      svg.appendChild(line);
+
+      // Tooltip aktivieren
+      node.addEventListener('click', () => {
+        title.textContent = proj.title;
+        desc.textContent = proj.description;
+        link.href = proj.link;
+        tooltip.style.top = `${y + 100}px`;
+        tooltip.style.left = `${x}px`;
+        tooltip.classList.remove('hidden');
+      });
     });
-  });
+  }
 
   document.addEventListener('click', e => {
     if (!e.target.closest('.node') && !e.target.closest('#tooltip')) {
@@ -121,32 +160,7 @@
     }
   });
 
-  // Linien vom Zentrum zu den Projekten
-  function drawLines() {
-    const center = document.querySelector('.node.center');
-    const projects = document.querySelectorAll('.node:not(.center)');
-    const svg = document.querySelector('.network-lines');
-    svg.innerHTML = ''; // Alte Linien entfernen
-  
-    const centerRect = center.getBoundingClientRect();
-    const cx = centerRect.left + centerRect.width / 2 + window.scrollX;
-    const cy = centerRect.top + centerRect.height / 2 + window.scrollY;
-  
-    projects.forEach(project => {
-      const rect = project.getBoundingClientRect();
-      const x = rect.left + rect.width / 2 + window.scrollX;
-      const y = rect.top + rect.height / 2 + window.scrollY;
-  
-      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      line.setAttribute('x1', cx);
-      line.setAttribute('y1', cy);
-      line.setAttribute('x2', x);
-      line.setAttribute('y2', y);
-      line.setAttribute('stroke', '#ccc');
-      line.setAttribute('stroke-width', '2');
-      svg.appendChild(line);
-    });
-  }
+  window.addEventListener('DOMContentLoaded', createProjectNodes);
 </script>
 
 </body>
