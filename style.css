@@ -620,12 +620,24 @@
 
 .network-container {
   position: relative;
+  width: 100%;
   max-width: 1000px;
-  margin: 4rem auto;
   height: 600px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
+  margin: 4rem auto;
   background: white;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.network-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .node {
@@ -633,7 +645,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: white;
   box-shadow: 0 0 6px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
@@ -658,12 +670,13 @@
   background-color: var(--dark);
   width: 100px;
   height: 100px;
+  z-index: 2;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
 }
 
+/* Tooltip bleibt wie von dir definiert */
 .tooltip {
   position: absolute;
   background-color: #fff;
@@ -699,16 +712,6 @@
 
 .hidden {
   display: none;
-}
-
-.network-lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* ================================= RESOURCES SECTION ================================== */
