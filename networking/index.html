@@ -127,16 +127,16 @@
     const projects = document.querySelectorAll('.node:not(.center)');
     const svg = document.querySelector('.network-lines');
     svg.innerHTML = ''; // Alte Linien entfernen
-
+  
     const centerRect = center.getBoundingClientRect();
     const cx = centerRect.left + centerRect.width / 2 + window.scrollX;
     const cy = centerRect.top + centerRect.height / 2 + window.scrollY;
-
+  
     projects.forEach(project => {
       const rect = project.getBoundingClientRect();
       const x = rect.left + rect.width / 2 + window.scrollX;
       const y = rect.top + rect.height / 2 + window.scrollY;
-
+  
       const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
       line.setAttribute('x1', cx);
       line.setAttribute('y1', cy);
@@ -147,11 +147,6 @@
       svg.appendChild(line);
     });
   }
-
-  // Events zum Neuzeichnen bei Lageänderung
-  window.addEventListener('DOMContentLoaded', drawLines);
-  window.addEventListener('resize', drawLines);
-  window.addEventListener('scroll', drawLines);
 </script>
 
 </body>
