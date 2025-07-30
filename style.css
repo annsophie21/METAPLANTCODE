@@ -616,26 +616,25 @@
   background-color: #f9f9f9;
   padding: 4rem 2rem;
   text-align: center;
+  position: relative;
 }
 
 .network-container {
   position: relative;
-  width: 100%;
-  max-width: 1000px;
+  width: 600px;
   height: 600px;
   margin: 4rem auto;
   background: white;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .network-lines {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 600px;
+  height: 600px;
   z-index: 0;
   pointer-events: none;
 }
@@ -646,7 +645,7 @@
   height: 80px;
   border-radius: 50%;
   background-color: white;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -667,32 +666,29 @@
 }
 
 .node.center {
-  background-color: var(--dark);
   width: 100px;
   height: 100px;
-  z-index: 2;
-  left: 50%;
-  top: 50%;
+  background-color: var(--dark);
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
-/* Tooltip bleibt wie von dir definiert */
 .tooltip {
   position: absolute;
-  background-color: #fff;
+  background: white;
   border: 1px solid var(--light);
+  border-radius: 8px;
   padding: 1rem;
   max-width: 220px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   text-align: left;
 }
 
 .tooltip h3 {
   margin-top: 0;
-  color: var(--dark);
   font-size: 1.1rem;
+  color: var(--dark);
 }
 
 .tooltip p {
